@@ -115,6 +115,29 @@ knitr::include_graphics("images/saving-R-script.gif")
 
 ```
 
+## Exporting R file from Posit Cloud {#sec-positexport}
+
+To export your R script from Posit Cloud, follow the instructions below (@fig-export).
+
+1) Check the box next to the file you wish to export in the `Files` pane.
+
+2) In the same pane, click `More` (top right of the `Files` pane).
+
+3) Select `Export...` from the dropdown menu.
+
+4) Be sure to name your file according to the instructions in the assignment, then click `Download`.
+
+```{r}
+#| label: fig-export
+#| echo: false
+#| fig-cap: "Exporting your R script from Posit Cloud."
+#| fig-align: center
+
+knitr::include_graphics("images/posit-export-file.gif")
+
+```
+
+
 
 ## R script checklist for lab assignments
 
