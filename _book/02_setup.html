@@ -193,18 +193,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tips on Working with R</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./04_ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Graphing with <code>ggplot2</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_missing-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Missing Data</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -220,9 +208,8 @@ window.Quarto = {
   <li><a href="#prepare-r-script" id="toc-prepare-r-script" class="nav-link" data-scroll-target="#prepare-r-script"><span class="header-section-number">3.3</span> Prepare R script</a></li>
   <li><a href="#creating-foldable-code-sections" id="toc-creating-foldable-code-sections" class="nav-link" data-scroll-target="#creating-foldable-code-sections"><span class="header-section-number">3.4</span> Creating foldable code sections</a></li>
   <li><a href="#install-and-load-packages" id="toc-install-and-load-packages" class="nav-link" data-scroll-target="#install-and-load-packages"><span class="header-section-number">3.5</span> Install and load packages</a></li>
-  <li><a href="#set-working-directory-and-readload-data-into-r" id="toc-set-working-directory-and-readload-data-into-r" class="nav-link" data-scroll-target="#set-working-directory-and-readload-data-into-r"><span class="header-section-number">3.6</span> Set working directory and read/load data into R</a></li>
-  <li><a href="#sec-saveRscript" id="toc-sec-saveRscript" class="nav-link" data-scroll-target="#sec-saveRscript"><span class="header-section-number">3.7</span> Saving your R script</a></li>
-  <li><a href="#assignment-r-script-checklist" id="toc-assignment-r-script-checklist" class="nav-link" data-scroll-target="#assignment-r-script-checklist"><span class="header-section-number">3.8</span> Assignment R script checklist</a></li>
+  <li><a href="#sec-saveRscript" id="toc-sec-saveRscript" class="nav-link" data-scroll-target="#sec-saveRscript"><span class="header-section-number">3.6</span> Saving your R script</a></li>
+  <li><a href="#r-script-checklist-for-lab-assignments" id="toc-r-script-checklist-for-lab-assignments" class="nav-link" data-scroll-target="#r-script-checklist-for-lab-assignments"><span class="header-section-number">3.7</span> R script checklist for lab assignments</a></li>
   </ul>
 </nav>
     </div>
@@ -251,12 +238,13 @@ window.Quarto = {
 <p>In this course you will use R for lab assignments. This chapter walks you through setting up R in preparation for completing assignments. Although you may have to refer to this chapter the first few times you set up R, you will soon become accustomed to the process and it will be a natural part of your workflow.</p>
 <section id="open-rstudio-or-posit-cloud" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="open-rstudio-or-posit-cloud"><span class="header-section-number">3.1</span> Open RStudio or Posit Cloud</h2>
-<p>Remember that R is the engine while RStudio is your dashboard. If you are using Posit Cloud, your engine is already integrated and you only need to navigate to the dashboard (i.e., Posit Cloud website). When you head out in a car, you don’t start by tinkering with the engine. Instead, you use the car via its dashboard.</p>
+<p>Remember that R is the engine while RStudio is your dashboard. If you are using Posit Cloud, your engine is already integrated and you only need to navigate to the dashboard on the Posit Cloud website.</p>
+<p>This is analogous to when you head out in a car; you don’t start by tinkering with the engine. Instead, you use the car via its dashboard.</p>
 <p>Similarly, we will interact and use R through RStudio or Posit Cloud.</p>
 </section>
 <section id="create-a-new-r-script" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="create-a-new-r-script"><span class="header-section-number">3.2</span> Create a new R script</h2>
-<p>To start a new R script, use the <em>File</em> menu or the shortcut keys Ctrl + Shift + N (Windows) or Cmd + Shift + N (Mac).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can also use your mouse to point-and-click to open a new file (<a href="#fig-newscript" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>).</p>
+<p>To start a new R script, use the <em>File</em> menu or the shortcut keys Ctrl + Shift + N (Windows) or Cmd + Shift + N (Mac).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can also use your mouse to point-and-click to open a new file in RStudio (<a href="#fig-newscript" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>) or Posit Cloud (<a href="#fig-newpositscript" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-newscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -265,7 +253,21 @@ window.Quarto = {
 <img src="images/new-R-script.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Open a new R script in RStudio or Posit Cloud.
+Figure&nbsp;3.1: Open a new R script in RStudio.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-newpositscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-newpositscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/posit-new-file.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newpositscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Open a new R script in Posit Cloud.
 </figcaption>
 </figure>
 </div>
@@ -277,41 +279,50 @@ Figure&nbsp;3.1: Open a new R script in RStudio or Posit Cloud.
 <p>To prepare your R script, use comments to type any relevant information about the script. Examples of relevant information include your name, your course, the semester during which you are enrolled in this course, the assignment name.</p>
 <p>Comments in R are denoted by the hashtag symbol, <code>#</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## This is a comment.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## This is a comment.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Name: Test Student</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># UNID: u0000000</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Section: 002</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Assignment: LA-3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Once you have included information about your script as comments, you should <strong>set your working directory</strong> (Figure @ref(fig:wd)). You can use the command <code>setwd()</code> to do this or the shortcut keys: Ctrl + Shift + H (Windows/Mac).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/set-working-dir.gif" class="img-fluid figure-img"></p>
-<figcaption>Set your working directory in RStudio using the function, <code>setwd()</code>.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<hr>
+<p>Once you have included information about your script as comments, you can move on to creating foldable code sections.</p>
 </section>
 <section id="creating-foldable-code-sections" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="creating-foldable-code-sections"><span class="header-section-number">3.4</span> Creating foldable code sections</h2>
-<p>You can also create sections of foldable code in RStudio (<em>Code</em> &gt; <em>Insert Section…</em>). The figure below shows you how. Once you have created a section, you can collapse it by clicking the arrows next to the line numbers on the</p>
+<p>You can also create sections of foldable code in RStudio (<code>Code</code> &gt; <code>Insert Section...</code>). <a href="#fig-fold" class="quarto-xref">Figure&nbsp;<span>3.3</span></a> below shows you how. Once you have created a section, you can collapse it by clicking the arrows next to the line numbers in the script pane.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/R-foldable-code.gif" class="img-fluid figure-img"></p>
-<figcaption>Creating sections of foldable code in RStudio.</figcaption>
+<div id="fig-fold" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/R-foldable-code.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Creating sections of foldable code.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<hr>
 </section>
 <section id="install-and-load-packages" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="install-and-load-packages"><span class="header-section-number">3.5</span> Install and load packages</h2>
-<p>Next, you need to install and load the R packages (see @ref(packages)) you will be using for this R session. Refer to section @ref(packages) for more information about installing vs.&nbsp;loading packages.</p>
+<p>Next, you need to install and load the R packages you will be using for this R session. Refer to <a href="01_get-started.html#sec-packages" class="quarto-xref"><span>Section 2.4.5</span></a> for more information about installing vs.&nbsp;loading packages.</p>
 <p>Remember that you only need to install packages once but you need to load packages each time you open R.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The functions to install and load packages are <code>install.packages()</code> and <code>library()</code>, respectively.</p>
+</div>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the tidyverse package</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
@@ -319,29 +330,13 @@ Figure&nbsp;3.1: Open a new R script in RStudio or Posit Cloud.
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the tidyverse package (after installing)</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr>
 </section>
-<section id="set-working-directory-and-readload-data-into-r" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="set-working-directory-and-readload-data-into-r"><span class="header-section-number">3.6</span> Set working directory and read/load data into R</h2>
-<p>Once you have installed and loaded the packages that you will need to complete your assignment, you need to set your working directory (the path shown below is specific to your computer–replace <code>c:/Users/SaraK/COMM-3710</code> with the path to the working directory that you created on your computer for this course).</p>
-<p>You can use the keyboard shortcut in RStudio (Win/Mac: Ctrl + Shift + H) or use the <code>setwd()</code> function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Set the working directory to my working directory</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"c:/Users/SaraK/COMM-3710"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Read data from dataset.csv file into R (note the file name of your dataset</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="do">## might be different)</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"dataset.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You can replace <code>dataframe_name</code> with a name of your choice.</p>
-<hr>
-</section>
-<section id="sec-saveRscript" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="sec-saveRscript"><span class="header-section-number">3.7</span> Saving your R script</h2>
+<section id="sec-saveRscript" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-saveRscript"><span class="header-section-number">3.6</span> Saving your R script</h2>
 <p><strong>Be sure to save your work often.</strong></p>
-<p>You are likely familiar with file types like <em>.docx</em> (Word documents), <em>.pdf</em> (PDF documents), and <em>.txt</em> (text files). If you have not worked with R prior to enrolling in this course, you may not have encountered files with the extension <strong>.R</strong>.</p>
-<p>Files with a .R extension are known as <strong>R scripts</strong>. As noted in Section @ref(tour), a R script is simply a text file containing a set of commands and comments.</p>
-<p>To save your script, click the <img src="images/save.png"> icon in RStudio or use the <em>File</em> menu (Figure @ref(fig:fig-save)). Give the file a sensible name and click <em>Save</em>. The file will be saved as <filename>.R in your working directory.</filename></p>
+<p>You are likely familiar with file types like <code>.docx</code> (Word documents), <code>.pdf</code> (PDF documents), and <code>.txt</code> (text files). If you have not worked with R prior to enrolling in this course, you may not have encountered files with the extension <code>.R</code>.</p>
+<p>Files with a <code>.R</code> extension are known as <strong>R scripts</strong>. As noted in <a href="01_get-started.html#sec-tour" class="quarto-xref"><span>Section 2.4.1</span></a>, a R script is simply a text file containing a set of commands and comments.</p>
+<p>To save your script, click the <img src="images/save.png"> icon in RStudio or use the <strong>File</strong> menu (<a href="#fig-save" class="quarto-xref">Figure&nbsp;<span>3.4</span></a>). Give the file a sensible name and click <strong>Save</strong>. The file will be saved as <code>&lt;filename&gt;.R</code> in your working directory.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-save" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -350,24 +345,22 @@ Figure&nbsp;3.1: Open a new R script in RStudio or Posit Cloud.
 <img src="images/saving-R-script.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-save-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.2: Saving your R script in RStudio.
+Figure&nbsp;3.4: Saving your R script in Posit Cloud or RStudio.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<hr>
 </section>
-<section id="assignment-r-script-checklist" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="assignment-r-script-checklist"><span class="header-section-number">3.8</span> Assignment R script checklist</h2>
+<section id="r-script-checklist-for-lab-assignments" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="r-script-checklist-for-lab-assignments"><span class="header-section-number">3.7</span> R script checklist for lab assignments</h2>
 <p>Be sure you have <em>at least</em> the following components in your R script. This list is <strong>not</strong> comprehensive. It represents the minimal requirements for your R script.</p>
-<ul>
-<li>Full name and student ID #</li>
-<li>Assignment name/number (e.g., LA.1)</li>
-<li>Annotations explaining your R code</li>
-<li>R command to set working directory</li>
-<li>R command to install (if necessary) and load packages</li>
-<li>R commands necessary for completion of your assignment</li>
+<ul class="task-list">
+<li><label><input type="checkbox">Full name and student ID #</label></li>
+<li><label><input type="checkbox">Assignment name/number (e.g., LA.1)</label></li>
+<li><label><input type="checkbox">Annotations explaining your R code</label></li>
+<li><label><input type="checkbox">R commands to install (if necessary) and load packages</label></li>
+<li><label><input type="checkbox">R commands necessary for completion of your assignment</label></li>
 </ul>
 
 
