@@ -180,11 +180,21 @@
     ]
   },
   {
+    "objectID": "02_setup.html#sec-positexport",
+    "href": "02_setup.html#sec-positexport",
+    "title": "3  Assignment Setup",
+    "section": "3.7 Exporting R file from Posit Cloud",
+    "text": "3.7 Exporting R file from Posit Cloud\nTo export your R script from Posit Cloud, follow the instructions below (Figure 3.5).\n\nCheck the box next to the file you wish to export in the Files pane.\nIn the same pane, click More (top right of the Files pane).\nSelect Export... from the dropdown menu.\nBe sure to name your file according to the instructions in the assignment, then click Download.\n\n\n\n\n\n\n\n\n\nFigure 3.5: Exporting your R script from Posit Cloud.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Assignment Setup</span>"
+    ]
+  },
+  {
     "objectID": "02_setup.html#r-script-checklist-for-lab-assignments",
     "href": "02_setup.html#r-script-checklist-for-lab-assignments",
     "title": "3  Assignment Setup",
-    "section": "3.7 R script checklist for lab assignments",
-    "text": "3.7 R script checklist for lab assignments\nBe sure you have at least the following components in your R script. This list is not comprehensive. It represents the minimal requirements for your R script.\n\nFull name and student ID #\nAssignment name/number (e.g., LA.1)\nAnnotations explaining your R code\nR commands to install (if necessary) and load packages\nR commands necessary for completion of your assignment",
+    "section": "3.8 R script checklist for lab assignments",
+    "text": "3.8 R script checklist for lab assignments\nBe sure you have at least the following components in your R script. This list is not comprehensive. It represents the minimal requirements for your R script.\n\nFull name and student ID #\nAssignment name/number (e.g., LA.1)\nAnnotations explaining your R code\nR commands to install (if necessary) and load packages\nR commands necessary for completion of your assignment",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Assignment Setup</span>"
     ]
