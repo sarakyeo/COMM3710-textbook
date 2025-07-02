@@ -207,7 +207,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#on-labeling-and-naming-objects" id="toc-on-labeling-and-naming-objects" class="nav-link active" data-scroll-target="#on-labeling-and-naming-objects"><span class="header-section-number">4.1</span> On labeling and naming objects</a></li>
-  <li><a href="#on-script-annotation" id="toc-on-script-annotation" class="nav-link" data-scroll-target="#on-script-annotation"><span class="header-section-number">4.2</span> On script annotation</a></li>
+  <li><a href="#on-annotating-your-r-script" id="toc-on-annotating-your-r-script" class="nav-link" data-scroll-target="#on-annotating-your-r-script"><span class="header-section-number">4.2</span> On annotating your R script</a></li>
   <li><a href="#be-patient" id="toc-be-patient" class="nav-link" data-scroll-target="#be-patient"><span class="header-section-number">4.3</span> Be patient</a></li>
   </ul>
 </nav>
@@ -235,18 +235,21 @@ div.csl-indent {
 
 
 <p>This chapter contains a collection of tips to help you progress on your R learning journey. Remember that there are many ways to achieve a goal using R code and there is a large community of R users who are often willing and able to help with troubleshooting code (e.g., <a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a>, <a href="https://community.rstudio.com/">RStudio Community</a>).</p>
-<hr>
 <section id="on-labeling-and-naming-objects" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="on-labeling-and-naming-objects"><span class="header-section-number">4.1</span> On labeling and naming objects</h2>
 <ol type="1">
-<li><strong>R is case-sensitive</strong>. We covered this in Section @ref(learning-tips) but it is important enough to repeat. <code>CATS</code>, <code>cats</code>, <code>Cats</code>, <code>cAts</code>, and <code>caTs</code> are all different objects in R (Figure @ref(fig:cats))!</li>
+<li><strong>R is case-sensitive</strong>. We covered this in Section @ref(learning-tips) but it is important enough to repeat. <code>CATS</code>, <code>cats</code>, <code>Cats</code>, <code>cAts</code>, and <code>caTs</code> are all different objects in R (<a href="#fig-cats" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>)!</li>
 </ol>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/aoshima-cats.jpg" class="img-fluid figure-img"></p>
-<figcaption>All the cats. This image is from Aoshima Island, Japan. Read more about Aoshima Island <a href="https://www.theatlantic.com/photo/2015/03/a-visit-to-aoshima-a-cat-island-in-japan/386647/">here</a>.</figcaption>
+<div id="fig-cats" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/aoshima-cats.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cats-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: All the cats. This image is from Aoshima Island, Japan. Read more about Aoshima Island <a href="https://www.theatlantic.com/photo/2015/03/a-visit-to-aoshima-a-cat-island-in-japan/386647/">here</a>.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -255,10 +258,9 @@ div.csl-indent {
 <li><p><strong>Object names cannot include spaces.</strong> Therefore, <code>my result</code> is not a valid name, but <code>my.result</code> or <code>my_result</code> will work. You can also use numbers in object names.</p></li>
 <li><p><strong>Short, informative labels for objects are best.</strong> Obviously, there is some trade-off between labels that are informative (tend to be long) vs.&nbsp;those that are short (tend not to be specific). Use your own judgment and common sense when naming objects. Read more about R coding style in <a href="https://style.tidyverse.org/">the tidyverse style guide’s Chapters 1 and 2</a>.</p></li>
 </ol>
-<hr>
 </section>
-<section id="on-script-annotation" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="on-script-annotation"><span class="header-section-number">4.2</span> On script annotation</h2>
+<section id="on-annotating-your-r-script" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="on-annotating-your-r-script"><span class="header-section-number">4.2</span> On annotating your R script</h2>
 <p>When writing R code, you should include explanations to your future self or to other team members (e.g., when conducting data analysis for your group project). These explanations can be included as comments and annotations to your R code in the script.</p>
 <p>Comments in R begin with <code>#</code>. R recognizes text that follows <code>#</code> as comments and ignores that text when running the code. Include annotations wherever possible; your future self and team members will thank you later.</p>
 <p>Below is an example of some code that includes annotations and comments. Note that you can use as many <code>#</code> as you want.</p>
@@ -292,34 +294,38 @@ div.csl-indent {
 <pre><code>[1] 44.66667</code></pre>
 </div>
 </div>
-<hr>
 </section>
 <section id="be-patient" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="be-patient"><span class="header-section-number">4.3</span> Be patient<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
 <blockquote class="blockquote">
 <p>“Whenever you’re learning a new tool, for a long time, you’re going to suck… But the good news is that is typical; that’s something that happens to everyone, and it’s only temporary.” -<em>Hadley Wickham</em></p>
 </blockquote>
-<p>The benefits of learning by doing slowly build and compound over time. This means that one <em>must invest time to learn R by doing</em>. You can expect the learning curve to look something like this:</p>
+<p>The benefits of learning by doing slowly build and compound over time (<a href="#fig-masteringR" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>). This means that one <em>must invest time to learn R by doing</em>. You can expect the learning curve to look something like this:</p>
 <div class="cell" data-layout-align="center">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
-</div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="03_tips_files/figure-html/mastering-R-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+<div id="fig-masteringR" class="quarto-float quarto-figure quarto-figure-center anchored" width="672" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-masteringR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="03_tips_files/figure-html/fig-masteringR-1.png" id="fig-masteringR" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-masteringR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Expect to ride the R rollercoaster (Figure @ref(fig:r-coaster)).</p>
+<p>Expect to ride the R rollercoaster (<a href="#fig-rcoaster" class="quarto-xref">Figure&nbsp;<span>4.3</span></a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/r_rollercoaster.png" class="img-fluid figure-img"></p>
-<figcaption>The R rollercoaster. Artwork by <a href="https://twitter.com/allison_horst">Allison Horst</a>.</figcaption>
+<div id="fig-rcoaster" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rcoaster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/r_rollercoaster.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rcoaster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: The R rollercoaster. Artwork by <a href="https://twitter.com/allison_horst">Allison Horst</a>.
+</figcaption>
 </figure>
 </div>
 </div>

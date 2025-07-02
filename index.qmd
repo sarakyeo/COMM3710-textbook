@@ -1,12 +1,14 @@
 
 # Introduction {#intro}
 
-This is a guide for getting started and using R on [Posit Cloud](https://posit.cloud/) in COMM 3710: Introduction to Quantitative Communication Research in the [Department of Communication](https://communication.utah.edu/) at the [University of Utah](https://www.utah.edu/).
+This is a guide for getting started and using R on [Posit Cloud](https://posit.cloud/) or [RStudio](https://posit.co/products/open-source/rstudio/?sid=1) in COMM 3710: Introduction to Quantitative Communication Research in the [Department of Communication](https://communication.utah.edu/) at the [University of Utah](https://www.utah.edu/).
 
 
 ## What is R?
 
-> "R is a language and environment for statistical computing and graphics."^[https://www.r-project.org/about.html]
+::: {.callout-tip}
+"R is a language and environment for statistical computing and graphics."^[https://www.r-project.org/about.html]
+:::
 
 R is a free software environment for computing and graphics from [CRAN](https://cloud.r-project.org/), the Comprehensive R Archive Network. You can always read more about R by visiting the homepage of the [R Project for Statistical Computing](https://www.r-project.org/) but you are probably more interested in the answer to the following question:
 
@@ -77,4 +79,4 @@ New users often confuse R and RStudio. The analogy makes it clear that one canno
 
 Remember that R is a programming language for statistical computing and graphics. RStudio, on the other hand, is an *integrated development environment (IDE)* that provides an interface and adds convenient features. Just like your dashboard has an odometer, navigation system, etc., that makes driving easier, using RStudio’s interface makes statistical computing using R much easier.
 
-Part of this [video](https://youtu.be/ZvPFKfNHBNQ) by Andy Field describes the difference between R and RStudio. This video will also show you how to install R and RStudio, which are covered in @sec-install.
+Part of this [video](https://youtu.be/ZvPFKfNHBNQ) by Andy Field describes the difference between R and RStudio. This video will also show you how to install R and RStudio, which are covered in @sec-installR.

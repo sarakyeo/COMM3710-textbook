@@ -10,8 +10,6 @@ book:
     - 01_get-started.qmd
     - 02_setup.qmd
     - 03_tips.qmd
-    - 04_ggplot2.qmd
-    - 05_missing-data.qmd
 
 bibliography: [book.bib, packages.bib]
 

@@ -1,9 +1,9 @@
 # Getting Started {#sec-start}
 
-Remember that you need either Posit Cloud or **both** R and RStudio. If you need R and RStudio, follow the instructions below to install both *programs* (also known as *applications*). If you are using Posit Cloud, skip to @sec-howto.
+Remember that you need either Posit Cloud or **both** R and RStudio. If you need R and RStudio, follow the instructions below to install both *programs* (also known as *applications*). If you are using Posit Cloud, skip to @sec-signupposit (*Getting Started on Posit Cloud*) or @sec-howto (*How do I Use R?*).
 
 
-## Installing R {#sec-install}
+## Installing R {#sec-installR}
 
 On a web browser, navigate to [https://cloud.r-project.org/](https://cloud.r-project.org/).
 
@@ -14,7 +14,7 @@ On a web browser, navigate to [https://cloud.r-project.org/](https://cloud.r-pro
 During installation, select the default settings when prompted.
 
 
-## Installing RStudio
+## Installing RStudio {#sec-installRStudio}
 
 On a web browser, go to [https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/). Scroll down to **All Installers**. Download and install the version of RStudio that corresponds to your operating system. Update RStudio as necessary.
 
@@ -34,6 +34,15 @@ knitr::include_graphics("images/open-RStudio.png")
 
 ```
 
+## Getting Started on Posit Cloud {#sec-signupposit}
+
+1) Open a web browser and navigate to [Posit.Cloud](https://posit.cloud/).
+
+2) Click on `Log In` in the top right corner of the page.
+
+3) On the next screen, click on the `Sign Up` tab or sign in with your Google or Github account (pick one if you have it and would like to use it for the course). You may sign up with any account that you would like.
+
+4) Once you have created an account, log in.
 
 ## How do I use R? {#sec-howto}
 
