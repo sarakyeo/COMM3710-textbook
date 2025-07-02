@@ -213,18 +213,6 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tips on Working with R</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./04_ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Graphing with <code>ggplot2</code></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_missing-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Missing Data</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -235,24 +223,25 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-install" id="toc-sec-install" class="nav-link active" data-scroll-target="#sec-install"><span class="header-section-number">2.1</span> Installing R</a></li>
-  <li><a href="#installing-rstudio" id="toc-installing-rstudio" class="nav-link" data-scroll-target="#installing-rstudio"><span class="header-section-number">2.2</span> Installing RStudio</a></li>
-  <li><a href="#sec-howto" id="toc-sec-howto" class="nav-link" data-scroll-target="#sec-howto"><span class="header-section-number">2.3</span> How do I use R?</a>
+  <li><a href="#sec-installR" id="toc-sec-installR" class="nav-link active" data-scroll-target="#sec-installR"><span class="header-section-number">2.1</span> Installing R</a></li>
+  <li><a href="#sec-installRStudio" id="toc-sec-installRStudio" class="nav-link" data-scroll-target="#sec-installRStudio"><span class="header-section-number">2.2</span> Installing RStudio</a></li>
+  <li><a href="#sec-signupposit" id="toc-sec-signupposit" class="nav-link" data-scroll-target="#sec-signupposit"><span class="header-section-number">2.3</span> Getting Started on Posit Cloud</a></li>
+  <li><a href="#sec-howto" id="toc-sec-howto" class="nav-link" data-scroll-target="#sec-howto"><span class="header-section-number">2.4</span> How do I use R?</a>
   <ul class="collapse">
-  <li><a href="#sec-tour" id="toc-sec-tour" class="nav-link" data-scroll-target="#sec-tour"><span class="header-section-number">2.3.1</span> A quick tour of RStudio</a></li>
-  <li><a href="#sec-terms" id="toc-sec-terms" class="nav-link" data-scroll-target="#sec-terms"><span class="header-section-number">2.3.2</span> Some basic terminology and concepts</a></li>
-  <li><a href="#errors-warnings-and-messages" id="toc-errors-warnings-and-messages" class="nav-link" data-scroll-target="#errors-warnings-and-messages"><span class="header-section-number">2.3.3</span> Errors, warnings, and messages</a></li>
-  <li><a href="#sec-tips" id="toc-sec-tips" class="nav-link" data-scroll-target="#sec-tips"><span class="header-section-number">2.3.4</span> Tips for learning to code</a></li>
-  <li><a href="#sec-packages" id="toc-sec-packages" class="nav-link" data-scroll-target="#sec-packages"><span class="header-section-number">2.3.5</span> R packages</a></li>
-  <li><a href="#how-do-i-know-whether-i-need-to-install-or-load-a-package" id="toc-how-do-i-know-whether-i-need-to-install-or-load-a-package" class="nav-link" data-scroll-target="#how-do-i-know-whether-i-need-to-install-or-load-a-package"><span class="header-section-number">2.3.6</span> How do I know whether I need to install or load a package?</a></li>
+  <li><a href="#sec-tour" id="toc-sec-tour" class="nav-link" data-scroll-target="#sec-tour"><span class="header-section-number">2.4.1</span> A quick tour of RStudio</a></li>
+  <li><a href="#sec-terms" id="toc-sec-terms" class="nav-link" data-scroll-target="#sec-terms"><span class="header-section-number">2.4.2</span> Some basic terminology and concepts</a></li>
+  <li><a href="#errors-warnings-and-messages" id="toc-errors-warnings-and-messages" class="nav-link" data-scroll-target="#errors-warnings-and-messages"><span class="header-section-number">2.4.3</span> Errors, warnings, and messages</a></li>
+  <li><a href="#sec-tips" id="toc-sec-tips" class="nav-link" data-scroll-target="#sec-tips"><span class="header-section-number">2.4.4</span> Tips for learning to code</a></li>
+  <li><a href="#sec-packages" id="toc-sec-packages" class="nav-link" data-scroll-target="#sec-packages"><span class="header-section-number">2.4.5</span> R packages</a></li>
+  <li><a href="#how-do-i-know-whether-i-need-to-install-or-load-a-package" id="toc-how-do-i-know-whether-i-need-to-install-or-load-a-package" class="nav-link" data-scroll-target="#how-do-i-know-whether-i-need-to-install-or-load-a-package"><span class="header-section-number">2.4.6</span> How do I know whether I need to install or load a package?</a></li>
   </ul></li>
-  <li><a href="#learning-by-doing" id="toc-learning-by-doing" class="nav-link" data-scroll-target="#learning-by-doing"><span class="header-section-number">2.4</span> Learning by doing</a>
+  <li><a href="#learning-by-doing" id="toc-learning-by-doing" class="nav-link" data-scroll-target="#learning-by-doing"><span class="header-section-number">2.5</span> Learning by doing</a>
   <ul class="collapse">
-  <li><a href="#creating-objects" id="toc-creating-objects" class="nav-link" data-scroll-target="#creating-objects"><span class="header-section-number">2.4.1</span> Creating objects</a></li>
-  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="header-section-number">2.4.2</span> Data types</a></li>
-  <li><a href="#r-functions" id="toc-r-functions" class="nav-link" data-scroll-target="#r-functions"><span class="header-section-number">2.4.3</span> R Functions</a></li>
-  <li><a href="#working-with-data-frames" id="toc-working-with-data-frames" class="nav-link" data-scroll-target="#working-with-data-frames"><span class="header-section-number">2.4.4</span> Working with data frames</a></li>
-  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators"><span class="header-section-number">2.4.5</span> Logical operators</a></li>
+  <li><a href="#creating-objects" id="toc-creating-objects" class="nav-link" data-scroll-target="#creating-objects"><span class="header-section-number">2.5.1</span> Creating objects</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="header-section-number">2.5.2</span> Data types</a></li>
+  <li><a href="#r-functions" id="toc-r-functions" class="nav-link" data-scroll-target="#r-functions"><span class="header-section-number">2.5.3</span> R Functions</a></li>
+  <li><a href="#working-with-data-frames" id="toc-working-with-data-frames" class="nav-link" data-scroll-target="#working-with-data-frames"><span class="header-section-number">2.5.4</span> Working with data frames</a></li>
+  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators"><span class="header-section-number">2.5.5</span> Logical operators</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -279,9 +268,9 @@ window.Quarto = {
 </header>
 
 
-<p>Remember that you need either Posit Cloud or <strong>both</strong> R and RStudio. If you need R and RStudio, follow the instructions below to install both <em>programs</em> (also known as <em>applications</em>). If you are using Posit Cloud, skip to <a href="#sec-howto" class="quarto-xref"><span>Section 2.3</span></a>.</p>
-<section id="sec-install" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="sec-install"><span class="header-section-number">2.1</span> Installing R</h2>
+<p>Remember that you need either Posit Cloud or <strong>both</strong> R and RStudio. If you need R and RStudio, follow the instructions below to install both <em>programs</em> (also known as <em>applications</em>). If you are using Posit Cloud, skip to <a href="#sec-signupposit" class="quarto-xref"><span>Section 2.3</span></a> (<em>Getting Started on Posit Cloud</em>) or <a href="#sec-howto" class="quarto-xref"><span>Section 2.4</span></a> (<em>How do I Use R?</em>).</p>
+<section id="sec-installR" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-installR"><span class="header-section-number">2.1</span> Installing R</h2>
 <p>On a web browser, navigate to <a href="https://cloud.r-project.org/">https://cloud.r-project.org/</a>.</p>
 <ul>
 <li>If you are a <strong>Windows</strong> user: Click on “Download R for Windows”, then click on “base”, then click on the Download link.</li>
@@ -290,8 +279,8 @@ window.Quarto = {
 </ul>
 <p>During installation, select the default settings when prompted.</p>
 </section>
-<section id="installing-rstudio" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="installing-rstudio"><span class="header-section-number">2.2</span> Installing RStudio</h2>
+<section id="sec-installRStudio" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-installRStudio"><span class="header-section-number">2.2</span> Installing RStudio</h2>
 <p>On a web browser, go to <a href="https://rstudio.com/products/rstudio/download/">https://rstudio.com/products/rstudio/download/</a>. Scroll down to <strong>All Installers</strong>. Download and install the version of RStudio that corresponds to your operating system. Update RStudio as necessary.</p>
 <p>When you are ready to use R, you will open RStudio. In this course, you will rarely, if ever, need to use “base R.” <a href="#fig-openR" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> shows you which icon to click on to open RStudio. Remember that you need to have both programs installed on your computer–one does not work without the other.</p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -322,15 +311,24 @@ Figure&nbsp;2.1: Typically, you will only need to use RStudio for this course. C
 </div>
 </div>
 </section>
-<section id="sec-howto" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="sec-howto"><span class="header-section-number">2.3</span> How do I use R?</h2>
+<section id="sec-signupposit" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-signupposit"><span class="header-section-number">2.3</span> Getting Started on Posit Cloud</h2>
+<ol type="1">
+<li><p>Open a web browser and navigate to <a href="https://posit.cloud/">Posit.Cloud</a>.</p></li>
+<li><p>Click on <code>Log In</code> in the top right corner of the page.</p></li>
+<li><p>On the next screen, click on the <code>Sign Up</code> tab or sign in with your Google or Github account (pick one if you have it and would like to use it for the course). You may sign up with any account that you would like.</p></li>
+<li><p>Once you have created an account, log in.</p></li>
+</ol>
+</section>
+<section id="sec-howto" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-howto"><span class="header-section-number">2.4</span> How do I use R?</h2>
 <p>Unlike Excel, which has a point-and-click GUI, R is an <a href="https://en.wikipedia.org/wiki/Interpreter_(computing)">interpreted language</a>. This means that you, the user, must type in commands written in <strong>R code</strong>. In other words, this course will teach you to <strong>code</strong> or <strong>program</strong> using the R language.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>In COMM 3710, we will learn R by “doing.” You are responsible for your own learning–the best way to master R is to <a href="https://jamesclear.com/beginners-guide-deliberate-practice">practice deliberately</a>.</p>
 <blockquote class="blockquote">
 <p>“While regular practice might include mindless repetitions, deliberate practice requires focused attention and is conducted with the specific goal of improving performance.” <span class="citation" data-cites="clearBeginnerGuideDeliberate2017">(<a href="#ref-clearBeginnerGuideDeliberate2017" role="doc-biblioref">Clear 2017</a>)</span></p>
 </blockquote>
-<section id="sec-tour" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-tour"><span class="header-section-number">2.3.1</span> A quick tour of RStudio</h3>
+<section id="sec-tour" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="sec-tour"><span class="header-section-number">2.4.1</span> A quick tour of RStudio</h3>
 <p>Watch this <a href="https://youtu.be/HWnanydsBCs">video</a> by Andy Field to take a quick tour of RStudio.</p>
 <p>As you have learned from Andy Field’s video, the RStudio interface consists of four panels (<a href="#fig-panels" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>).</p>
 <blockquote class="blockquote">
@@ -352,8 +350,8 @@ Figure&nbsp;2.2: Editor and Console windows in RStudio.
 </div>
 </div>
 </section>
-<section id="sec-terms" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="sec-terms"><span class="header-section-number">2.3.2</span> Some basic terminology and concepts</h3>
+<section id="sec-terms" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="sec-terms"><span class="header-section-number">2.4.2</span> Some basic terminology and concepts</h3>
 <p>Throughout the book, <code>R code</code> will be distinguished from text by using a different font. Let’s start with some basic terms.</p>
 <ul>
 <li><strong>Console</strong>: This is the panel in RStudio where you can view the output or results of your commands. Note that you can also enter commands in the Console panel. Pressing Enter after each command runs it, i.e., it tells R to execute the command.</li>
@@ -365,8 +363,8 @@ Figure&nbsp;2.2: Editor and Console windows in RStudio.
 <li><strong>Functions</strong>: Functions are also known as <strong>commands</strong>. Functions and commands tell R what you want it to do. Functions take the form of <code>command()</code> with parentheses (or parents). The parentheses are for <strong>arguments</strong>, which give R specifics about the function you want it to perform.</li>
 </ul>
 </section>
-<section id="errors-warnings-and-messages" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="errors-warnings-and-messages"><span class="header-section-number">2.3.3</span> Errors, warnings, and messages</h3>
+<section id="errors-warnings-and-messages" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="errors-warnings-and-messages"><span class="header-section-number">2.4.3</span> Errors, warnings, and messages</h3>
 <p>R shows errors, warnings, and messages in the Console window. Typically, it does so in <span style="color: red;">red</span> font, which can be intimidating for new users.</p>
 <p>Do not worry, you are unlikely to “break” R. And as long as you save your work frequently, you will not lose it.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -383,8 +381,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="sec-tips" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="sec-tips"><span class="header-section-number">2.3.4</span> Tips for learning to code</h3>
+<section id="sec-tips" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="sec-tips"><span class="header-section-number">2.4.4</span> Tips for learning to code</h3>
 <p>Learning to code can be frustrating at first. Frustrations are understandable and inevitable. But with <a href="https://jamesclear.com/beginners-guide-deliberate-practice">deliberate practice</a>, your coding and programming skills will improve.</p>
 <p>Keep the following tips from Ismay and Kim <span class="citation" data-cites="ismayStatisticalInferenceData2021">(<a href="#ref-ismayStatisticalInferenceData2021" role="doc-biblioref">2021</a>)</span> in mind as you learn to code in R:</p>
 <ul>
@@ -395,8 +393,8 @@ Tip
 <li><strong>R is case-sensitive.</strong> Most coding mistakes are typos. This is exacerbated when the programming language, such as R, is case-sensitive. <code>Result</code>, <code>result</code>, and <code>RESULT</code> are all different in R!</li>
 </ul>
 </section>
-<section id="sec-packages" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="sec-packages"><span class="header-section-number">2.3.5</span> R packages</h3>
+<section id="sec-packages" class="level3" data-number="2.4.5">
+<h3 data-number="2.4.5" class="anchored" data-anchor-id="sec-packages"><span class="header-section-number">2.4.5</span> R packages</h3>
 <p>There is a worldwide community of R users (e.g., search for #RCatLadies on <a href="https://x.com/">X</a>) who write code and bundle them into packages to extend the functionality of R.</p>
 <p>Some examples that we will use in this course include <code>ggplot2</code> <span class="citation" data-cites="wickhamGgplot2ElegantGraphics2020">(<a href="#ref-wickhamGgplot2ElegantGraphics2020" role="doc-biblioref">Wickham, Navarro, and Pederson 2020</a>)</span>, <code>descr</code>, and <code>tidyverse</code>.</p>
 <p>Packages in R are like apps on your phone–they extend the functionality of the base technology (<a href="#fig-packages" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>).</p>
@@ -444,8 +442,8 @@ Figure&nbsp;2.4: Watch this gif to learn how to install and load packages in R. 
 <pre><code>Error: could not find function</code></pre>
 <p>This error means that you likely did not load the package for this R session. Remember, you need to load R packages each time you open R.</p>
 </section>
-<section id="how-do-i-know-whether-i-need-to-install-or-load-a-package" class="level3" data-number="2.3.6">
-<h3 data-number="2.3.6" class="anchored" data-anchor-id="how-do-i-know-whether-i-need-to-install-or-load-a-package"><span class="header-section-number">2.3.6</span> How do I know whether I need to install or load a package?</h3>
+<section id="how-do-i-know-whether-i-need-to-install-or-load-a-package" class="level3" data-number="2.4.6">
+<h3 data-number="2.4.6" class="anchored" data-anchor-id="how-do-i-know-whether-i-need-to-install-or-load-a-package"><span class="header-section-number">2.4.6</span> How do I know whether I need to install or load a package?</h3>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-packages-flowchart" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -462,9 +460,9 @@ Figure&nbsp;2.5: Flowchart to help determine whether you should load or install 
 </div>
 </section>
 </section>
-<section id="learning-by-doing" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="learning-by-doing"><span class="header-section-number">2.4</span> Learning by doing</h2>
-<p>Let’s try out some commands. Open RStudio and start a new R script. If you need a reminder of how to start a new R script, review <a href="#sec-tour" class="quarto-xref"><span>Section 2.3.1</span></a>. To save your R script, see <a href="02_setup.html#sec-saveRscript" class="quarto-xref"><span>Section 3.7</span></a>.</p>
+<section id="learning-by-doing" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="learning-by-doing"><span class="header-section-number">2.5</span> Learning by doing</h2>
+<p>Let’s try out some commands. Open RStudio and start a new R script. If you need a reminder of how to start a new R script, review <a href="#sec-tour" class="quarto-xref"><span>Section 2.4.1</span></a>. To save your R script, see <a href="02_setup.html#sec-saveRscript" class="quarto-xref"><span>Section 3.6</span></a>.</p>
 <p>To start, let’s execute a simple command. In the <strong>Editor</strong>, type the following command.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="sc">+</span> <span class="dv">8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -558,8 +556,8 @@ Table&nbsp;2.1: Operations, operators, and example inputs and outputs in R.
 </figure>
 </div>
 </div>
-<section id="creating-objects" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="creating-objects"><span class="header-section-number">2.4.1</span> Creating objects</h3>
+<section id="creating-objects" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="creating-objects"><span class="header-section-number">2.5.1</span> Creating objects</h3>
 <p>R is an <a href="https://en.wikipedia.org/wiki/Object-oriented_programming"><strong>OOP</strong> or <strong>object-oriented programming</strong></a> language.</p>
 <p>You can think of an <strong>object</strong> as a container that holds information that you, the user, assigns to it. You will need to assign a label to the container. R stores the information within the labeled container in the <strong>Environment</strong> ( <a href="#fig-environment" class="quarto-xref">Figure&nbsp;<span>2.6</span></a>), which is the one of the tabs in the top right panel of RStudio.</p>
 <div class="cell" data-layout-align="center">
@@ -606,8 +604,8 @@ Figure&nbsp;2.7: The Environment panel after you run the R code to create the ob
 </div>
 </div>
 </section>
-<section id="data-types" class="level3" data-number="2.4.2">
-<h3 data-number="2.4.2" class="anchored" data-anchor-id="data-types"><span class="header-section-number">2.4.2</span> Data types</h3>
+<section id="data-types" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="data-types"><span class="header-section-number">2.5.2</span> Data types</h3>
 <p>R can store objects with different types of data. Let’s create three objects containing different data types.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fl">19.81</span></span>
@@ -634,9 +632,9 @@ Figure&nbsp;2.7: The Environment panel after you run the R code to create the ob
 </div>
 <p><code>a</code> is numeric; <code>b</code> is a character string; <code>c</code> is a so-called “logical” data type that is either <code>TRUE</code> or <code>FALSE</code>. These data types can be organized into various data structures. For example, a data frame, such as the data files you will use in your assignments, is one data structure.</p>
 </section>
-<section id="r-functions" class="level3" data-number="2.4.3">
-<h3 data-number="2.4.3" class="anchored" data-anchor-id="r-functions"><span class="header-section-number">2.4.3</span> R Functions</h3>
-<p>As mentioned in Section <a href="#sec-terms" class="quarto-xref"><span>Section 2.3.2</span></a>, functions are commands that tell R what you want it to do. Functions take the (generic) form of <code>command()</code> with parentheses (or parents). The parentheses are for <strong>arguments</strong>, which give R specifics about the function you want it to perform.</p>
+<section id="r-functions" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="r-functions"><span class="header-section-number">2.5.3</span> R Functions</h3>
+<p>As mentioned in Section <a href="#sec-terms" class="quarto-xref"><span>Section 2.4.2</span></a>, functions are commands that tell R what you want it to do. Functions take the (generic) form of <code>command()</code> with parentheses (or parents). The parentheses are for <strong>arguments</strong>, which give R specifics about the function you want it to perform.</p>
 <p>For example, the <code>print()</code> function will print the result of the argument or input within the parentheses.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Hello, SLC!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -653,8 +651,8 @@ Figure&nbsp;2.7: The Environment panel after you run the R code to create the ob
 </div>
 </div>
 </section>
-<section id="working-with-data-frames" class="level3" data-number="2.4.4">
-<h3 data-number="2.4.4" class="anchored" data-anchor-id="working-with-data-frames"><span class="header-section-number">2.4.4</span> Working with data frames</h3>
+<section id="working-with-data-frames" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="working-with-data-frames"><span class="header-section-number">2.5.4</span> Working with data frames</h3>
 <p>Let’s create a data frame to learn how to work with them. In the <strong>Editor</strong> panel, create a data frame by typing the following commands:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>id <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span></span>
@@ -736,8 +734,8 @@ female   male
 </div>
 </div>
 </section>
-<section id="logical-operators" class="level3" data-number="2.4.5">
-<h3 data-number="2.4.5" class="anchored" data-anchor-id="logical-operators"><span class="header-section-number">2.4.5</span> Logical operators</h3>
+<section id="logical-operators" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="logical-operators"><span class="header-section-number">2.5.5</span> Logical operators</h3>
 <p>We used one possible logical operator, <code>==</code>, in the example above. Other logical operators include:</p>
 <ul>
 <li><code>&lt;</code>: less than</li>
