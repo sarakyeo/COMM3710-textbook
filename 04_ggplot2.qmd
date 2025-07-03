@@ -155,7 +155,7 @@ Let's create a graph with a toy data set called `quiz.csv`. It contains **simula
 
 First, make sure you set the working directory correctly on your computer and load the packages. 
 
-Download this [data set](https://github.com/sarakyeo/COMM3710-textbook/blob/main/quiz.csv) (right click and select `Save As...`) and read it into R.
+Download this [data set](https://raw.githubusercontent.com/sarakyeo/COMM3710-textbook/refs/heads/main/quiz.csv) (right click, select `Save link as...`, and change the file extension to `.csv`, if necessary), save it as a `.csv` file, and read it into R.
 
 ```{r}
 #| message: false
