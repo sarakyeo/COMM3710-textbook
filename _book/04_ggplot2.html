@@ -64,7 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./05_missing-data.html" rel="next">
 <link href="./03_tips.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -170,12 +169,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Graphing with <code>ggplot2</code></span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./05_missing-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Missing Data</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -208,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="ggplot2" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Graphing with <code>ggplot2</code></span></span></h1>
+<h1 class="title"><span id="sec-ggplot2" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Graphing with <code>ggplot2</code></span></span></h1>
 </div>
 
 
@@ -233,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>tibble</code></li>
 </ul>
 <p>To learn more about the tidyverse, visit <a href="https://www.tidyverse.org/">tidyverse.org</a>.</p>
-<p>To start working with graphs, first install and load the required package. Remember that you only have to install the package once (see Section @ref(packages) to review R packages).</p>
+<p>To start working with graphs, first install and load the required package. Remember that you only have to install the package once (see <a href="01_get-started.html#sec-packages" class="quarto-xref"><span>Section 2.4.5</span></a>) to review R packages).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>) <span class="co"># you may not need this command</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -243,13 +236,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="5.1" class="anchored" data-anchor-id="ggplot2-basics"><span class="header-section-number">5.1</span> <code>ggplot2</code> basics</h2>
 <p>Building <code>ggplot</code> graphics is typically a layered process. The function that we use is <code>ggplot()</code>. We use the <code>+</code> to add layers to the function.</p>
 <p>In the function arguments (i.e., the commands within the parentheses), we define the data set that we want to use with <code>data =</code>, the aesthetics (x- and y-axes) with <code>aes()</code>, and the type of graph with <code>geom</code>.</p>
-<p>As a reminder, the x- and y-axes on a graph are shown below (Figure @ref(fig:x-y-axes)).</p>
+<p>As a reminder, the x- and y-axes on a graph are shown below (<a href="#fig-x-y-axes" class="quarto-xref">Figure&nbsp;<span>5.1</span></a>).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/x-y-axes.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>The x- and y-axes on a graph.</figcaption>
+<div id="fig-x-y-axes" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-x-y-axes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/x-y-axes.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-x-y-axes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: The x- and y-axes on a graph.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -257,9 +254,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the steps below, we will build the command sequentially. The <code>ggplot()</code> function will not run until the basic layers are in place.</p>
 <section id="step-1.-specify-data-frame" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="step-1.-specify-data-frame"><span class="header-section-number">5.1.1</span> Step 1. Specify data frame</h3>
-<p>Use the dataframe name to specify the data frame you are using to build the plot. For example, if your data frame is named <code>utilities</code>, this line will be <code>utilities %&gt;% ggplot(...)</code>.</p>
+<p>Use the dataframe name to specify the data frame you are using to build the plot. For example, if your data frame is named <code>utilities</code>, this line will be <code>utilities |&gt; ggplot(...)</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">|&gt;</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -267,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="step-2.-specify-x--and-y-axes"><span class="header-section-number">5.1.2</span> Step 2. Specify x- and y-axes</h3>
 <p>Next, use <code>aes()</code> to tell R which variable to place on the x- (<code>x_var</code>) and y-axes (<code>y_var</code>). Note that you are adding this argument within the parentheses of the function, <code>ggplot()</code>. Be sure to close all parentheses–not doing so is a common error in R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you are only working with only one variable (e.g., plotting a histogram of one variable), you need only specify the <code>x =</code> variable within <code>aes()</code>.</p>
@@ -277,19 +274,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The third step is to tell R what type of graph to create–points, lines, bars, histograms, etc.–by adding the <code>geom</code> layer. This function is layered on to the <code>ggplot()</code> function using the <code>+</code> sign.</p>
 <p>For example, if we would like the relationship between two variables to be represented by a scatter plot, we can simply add <code>geom_point()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dataframe_name  <span class="sc">|&gt;</span>  </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span> <span class="co"># note the + sign</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we are plotting the histogram of one variable, we use <code>geom_histogram()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">|&gt;</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x_var)) <span class="sc">+</span> <span class="co"># note the + sign again</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For a bar plot, we use <code>geom_bar()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">|&gt;</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x_var)) <span class="sc">+</span> <span class="co"># note the + sign yet again</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -301,12 +298,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <code>+</code> sign used to add layers <strong>must</strong> be placed at the end of each line containing a layer. If the <code>+</code> sign is added in the line before the other layer, <code>ggplot2</code> will return an error message.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the correct way of adding layers</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">|&gt;</span> </span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>( .... ) <span class="sc">+</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>()</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This will give you an error message (note where the + is)</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dataframe_name <span class="sc">%&gt;%</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dataframe_name  <span class="sc">|&gt;</span>  </span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>( .... ) </span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -314,14 +311,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="learning-by-doing" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="learning-by-doing"><span class="header-section-number">5.3</span> Learning by doing</h2>
-<p>Let’s create a graph with a toy data set called <strong><em>quiz.csv</em></strong>. It contains <strong>simulated</strong> data for Quiz 1 and 2 scores of 120 students. There data set contains three variables:</p>
+<p>Let’s create a graph with a toy data set called <code>quiz.csv</code>. It contains <strong>simulated</strong> data for Quiz 1 and 2 scores of 120 students. There data set contains three variables:</p>
 <ul>
 <li><code>id</code>: Student ID</li>
 <li><code>quiz1</code>: Quiz 1 scores</li>
 <li><code>quiz2</code>: Quiz 2 scores</li>
 </ul>
 <p>First, make sure you set the working directory correctly on your computer and load the packages.</p>
-<p>Download this <a href="http://sarakyeo.github.io/COMM-3710-bookdown/quiz.csv">data set</a> (right click and select <em>Save As…</em>) and read it into R.</p>
+<p>Download this <a href="https://github.com/sarakyeo/COMM3710-textbook/blob/main/quiz.csv">data set</a> (right click and select <code>Save As...</code>) and read it into R.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"quiz.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -331,21 +328,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To better understand what R is doing step-by-step, run these lines one at a time and see what happens in the <strong>Plots</strong> panel in RStudio.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1: Try this command first</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>quiz  <span class="sc">|&gt;</span>  </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>()</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: Then try this one</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>quiz  <span class="sc">|&gt;</span>  </span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> quiz1))</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3: And, finally, try this</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>quiz  <span class="sc">|&gt;</span>  </span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> quiz1)) <span class="sc">+</span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As the exercise shows, the complete command is the third one.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>quiz  <span class="sc">|&gt;</span>  </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> quiz1)) <span class="sc">+</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -358,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>To do the same for Quiz 2 grades, simply change the x-axis specification in <code>aes()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">|&gt;</span>  </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> quiz2)) <span class="sc">+</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -375,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What if we want to examine whether there is a relationship between Quiz 1 and Quiz 2 scores? You might hypothesize that the scores on Quizzes 1 and 2 should be positively correlated.</p>
 <p>To examine this graphically, we can use a <strong>scatter plot</strong>, which depicts the relationship between two quantitative variables. In this case, we use <code>geom_point()</code> to tell R that we want a graph with points.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>quiz  <span class="sc">|&gt;</span>  </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> quiz1, <span class="at">y =</span> quiz2)) <span class="sc">+</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -391,7 +388,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="adding-axes-labels-and-plot-titles"><span class="header-section-number">5.3.3</span> Adding axes labels and plot titles</h3>
 <p>No graph is complete without axis labels and a title. We can add axis labels and a plot title with the <code>labs()</code> layer. Again, it is important to add this layer by using the <code>+</code> sign.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>quiz <span class="sc">|&gt;</span> </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> quiz1, <span class="at">y =</span> quiz2)) <span class="sc">+</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Quiz 1 Grades"</span>, </span>
@@ -840,9 +837,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05_missing-data.html" class="pagination-link" aria-label="Missing Data">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Missing Data</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

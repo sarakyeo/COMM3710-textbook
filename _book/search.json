@@ -258,5 +258,55 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Tips on Working with R</span>"
     ]
+  },
+  {
+    "objectID": "04_ggplot2.html",
+    "href": "04_ggplot2.html",
+    "title": "5  Graphing with ggplot2",
+    "section": "",
+    "text": "5.1 ggplot2 basics\nThis chapter covers the basics of plotting with the package, ggplot2. This package is contained within a collection of R packages designed for data science known as the tidyverse.\nThe core tidyverse includes packages that we use in everyday data analysis, including:\nTo learn more about the tidyverse, visit tidyverse.org.\nTo start working with graphs, first install and load the required package. Remember that you only have to install the package once (see Section 2.4.5) to review R packages).\nBuilding ggplot graphics is typically a layered process. The function that we use is ggplot(). We use the + to add layers to the function.\nIn the function arguments (i.e., the commands within the parentheses), we define the data set that we want to use with data =, the aesthetics (x- and y-axes) with aes(), and the type of graph with geom.\nAs a reminder, the x- and y-axes on a graph are shown below (Figure 5.1).\nFigure 5.1: The x- and y-axes on a graph.\nIn the steps below, we will build the command sequentially. The ggplot() function will not run until the basic layers are in place.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Graphing with `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "04_ggplot2.html#ggplot2-basics",
+    "href": "04_ggplot2.html#ggplot2-basics",
+    "title": "5  Graphing with ggplot2",
+    "section": "",
+    "text": "5.1.1 Step 1. Specify data frame\nUse the dataframe name to specify the data frame you are using to build the plot. For example, if your data frame is named utilities, this line will be utilities |&gt; ggplot(...).\n\ndataframe_name |&gt; \n        ggplot() \n\n\n\n5.1.2 Step 2. Specify x- and y-axes\nNext, use aes() to tell R which variable to place on the x- (x_var) and y-axes (y_var). Note that you are adding this argument within the parentheses of the function, ggplot(). Be sure to close all parentheses–not doing so is a common error in R.\n\ndataframe_name |&gt;\n        ggplot(aes(x = x_var, y = y_var))\n\nIf you are only working with only one variable (e.g., plotting a histogram of one variable), you need only specify the x = variable within aes().\n\n\n5.1.3 Step 3. Add geom\nThe third step is to tell R what type of graph to create–points, lines, bars, histograms, etc.–by adding the geom layer. This function is layered on to the ggplot() function using the + sign.\nFor example, if we would like the relationship between two variables to be represented by a scatter plot, we can simply add geom_point().\n\ndataframe_name  |&gt;  \n        ggplot(aes(x = x_var, y = y_var)) + # note the + sign\n        geom_point()\n\nIf we are plotting the histogram of one variable, we use geom_histogram().\n\ndataframe_name |&gt; \n        ggplot(aes(x = x_var)) + # note the + sign again\n        geom_histogram()\n\nFor a bar plot, we use geom_bar().\n\ndataframe_name |&gt; \n        ggplot(aes(x = x_var)) + # note the + sign yet again\n        geom_bar()",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Graphing with `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "04_ggplot2.html#important-considerations",
+    "href": "04_ggplot2.html#important-considerations",
+    "title": "5  Graphing with ggplot2",
+    "section": "5.2 Important considerations",
+    "text": "5.2 Important considerations\nThe + sign used to add layers must be placed at the end of each line containing a layer. If the + sign is added in the line before the other layer, ggplot2 will return an error message.\n\n# This is the correct way of adding layers\ndataframe_name |&gt; \n        ggplot( .... ) +\n        geom_point()\n\n# This will give you an error message (note where the + is)\ndataframe_name  |&gt;  \n        ggplot( .... ) \n        + geom_point()",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Graphing with `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "04_ggplot2.html#learning-by-doing",
+    "href": "04_ggplot2.html#learning-by-doing",
+    "title": "5  Graphing with ggplot2",
+    "section": "5.3 Learning by doing",
+    "text": "5.3 Learning by doing\nLet’s create a graph with a toy data set called quiz.csv. It contains simulated data for Quiz 1 and 2 scores of 120 students. There data set contains three variables:\n\nid: Student ID\nquiz1: Quiz 1 scores\nquiz2: Quiz 2 scores\n\nFirst, make sure you set the working directory correctly on your computer and load the packages.\nDownload this data set (right click and select Save As...) and read it into R.\n\nquiz &lt;- read_csv(\"quiz.csv\")\n\n\n5.3.1 Histograms\nLet us examine the distribution of grades for Quiz 1 using a histogram.\nTo better understand what R is doing step-by-step, run these lines one at a time and see what happens in the Plots panel in RStudio.\n\n# 1: Try this command first\nquiz  |&gt;  \n        ggplot()\n\n# 2: Then try this one\nquiz  |&gt;  \n        ggplot(aes(x = quiz1))\n\n# 3: And, finally, try this\nquiz  |&gt;  \n        ggplot(aes(x = quiz1)) +\n        geom_histogram()\n\nAs the exercise shows, the complete command is the third one.\n\nquiz  |&gt;  \n        ggplot(aes(x = quiz1)) +\n        geom_histogram()\n\n\n\n\n\n\n\n\nTo do the same for Quiz 2 grades, simply change the x-axis specification in aes().\n\nquiz |&gt;  \n        ggplot(aes(x = quiz2)) +\n        geom_histogram()\n\n\n\n\n\n\n\n\n\n\n5.3.2 Scatter plots\nWhat if we want to examine whether there is a relationship between Quiz 1 and Quiz 2 scores? You might hypothesize that the scores on Quizzes 1 and 2 should be positively correlated.\nTo examine this graphically, we can use a scatter plot, which depicts the relationship between two quantitative variables. In this case, we use geom_point() to tell R that we want a graph with points.\n\nquiz  |&gt;  \n        ggplot(aes(x = quiz1, y = quiz2)) +\n        geom_point() \n\n\n\n\n\n\n\n\n\n\n5.3.3 Adding axes labels and plot titles\nNo graph is complete without axis labels and a title. We can add axis labels and a plot title with the labs() layer. Again, it is important to add this layer by using the + sign.\n\nquiz |&gt; \n        ggplot(aes(x = quiz1, y = quiz2)) +\n        geom_point() + \n        labs(x = \"Quiz 1 Grades\", \n             y = \"Quiz 2 Grades\",\n             title = \"Relationship between Quiz 1 and Quiz 2 grades in COMM 3710\")",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Graphing with `ggplot2`</span>"
+    ]
+  },
+  {
+    "objectID": "04_ggplot2.html#additional-resources-for-graphing",
+    "href": "04_ggplot2.html#additional-resources-for-graphing",
+    "title": "5  Graphing with ggplot2",
+    "section": "5.4 Additional resources for graphing",
+    "text": "5.4 Additional resources for graphing\nThis guide includes only the basics of graphing with ggplot2. If you have questions that are not covered in this guide, the R Graphics Cookbook is a practical guide that provides recipes for quickly generating high-quality graphs.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Graphing with `ggplot2`</span>"
+    ]
   }
 ]
