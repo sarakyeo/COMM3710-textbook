@@ -12,7 +12,7 @@ library(rstatix)
 library(kableExtra)
 library(formatR)
 
-cps <- read.csv(here::here("COMM-3710", "LA", "CPS.csv"))
+cps <- read.csv("CPS.csv")
 
 ```
 
