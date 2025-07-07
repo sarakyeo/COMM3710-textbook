@@ -15,6 +15,11 @@ book:
     - LA-2-textbook.qmd
     - LA-3-textbook.qmd
     - LA-4-textbook.qmd
+    - LA-5-textbook.qmd
+    - LA-6-textbook.qmd
+    - LA-7-textbook.qmd
+    - LA-8-textbook.qmd
+    - LA-9-textbook.qmd
 
 bibliography: [book.bib, packages.bib]
 

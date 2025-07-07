@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sara K. Yeo">
-<meta name="dcterms.date" content="2025-07-01">
 
-<title>COMM 3710: Getting Started with R</title>
+<title>10&nbsp; LA-5: More Data Wrangling – COMM 3710: Getting Started with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -52,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_get-started.html" rel="next">
+<link href="./LA-6-textbook.html" rel="next">
+<link href="./LA-4-textbook.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -90,6 +69,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -102,7 +110,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LA-5-textbook.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LA-5: More Data Wrangling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -129,7 +137,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -183,8 +191,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LA-5-textbook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LA-5: Examining and Managing Data</span></span></a>
+  <a href="./LA-5-textbook.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LA-5: More Data Wrangling</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LA-6-textbook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LA-6: Data Visualization</span></span></a>
   </div>
 </li>
     </ul>
@@ -197,18 +211,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro"><span class="header-section-number">1</span> Introduction</a>
-  <ul class="collapse">
-  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link" data-scroll-target="#what-is-r"><span class="header-section-number">1.1</span> What is R?</a></li>
-  <li><a href="#why-r" id="toc-why-r" class="nav-link" data-scroll-target="#why-r"><span class="header-section-number">1.2</span> Why R?</a>
-  <ul class="collapse">
-  <li><a href="#ease-of-use" id="toc-ease-of-use" class="nav-link" data-scroll-target="#ease-of-use"><span class="header-section-number">1.2.1</span> Ease of Use</a></li>
-  <li><a href="#replicating-analysis" id="toc-replicating-analysis" class="nav-link" data-scroll-target="#replicating-analysis"><span class="header-section-number">1.2.2</span> Replicating Analysis</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">1.2.3</span> Visualization</a></li>
-  <li><a href="#still-wondering-why-we-use-r" id="toc-still-wondering-why-we-use-r" class="nav-link" data-scroll-target="#still-wondering-why-we-use-r"><span class="header-section-number">1.2.4</span> Still wondering why we use R?</a></li>
-  </ul></li>
-  <li><a href="#r-vs.-rstudio-vs.-posit-cloud" id="toc-r-vs.-rstudio-vs.-posit-cloud" class="nav-link" data-scroll-target="#r-vs.-rstudio-vs.-posit-cloud"><span class="header-section-number">1.3</span> R vs.&nbsp;RStudio vs.&nbsp;Posit Cloud</a></li>
-  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes"><span class="header-section-number">10.1</span> Learning Outcomes</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">10.2</span> Instructions</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">10.3</span> Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -217,26 +222,14 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">COMM 3710: Getting Started with R</h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LA-5: More Data Wrangling</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sara K. Yeo </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -246,90 +239,15 @@ div.csl-indent {
 </header>
 
 
-<section id="intro" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>This is a guide for getting started and using R on <a href="https://posit.cloud/">Posit Cloud</a> or <a href="https://posit.co/products/open-source/rstudio/?sid=1">RStudio</a> in COMM 3710: Introduction to Quantitative Communication Research in the <a href="https://communication.utah.edu/">Department of Communication</a> at the <a href="https://www.utah.edu/">University of Utah</a>.</p>
-<section id="what-is-r" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-r"><span class="header-section-number">1.1</span> What is R?</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>“R is a language and environment for statistical computing and graphics.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</div>
-</div>
-<p>R is a free software environment for computing and graphics from <a href="https://cloud.r-project.org/">CRAN</a>, the Comprehensive R Archive Network. You can always read more about R by visiting the homepage of the <a href="https://www.r-project.org/">R Project for Statistical Computing</a> but you are probably more interested in the answer to the following question:</p>
-<blockquote class="blockquote">
-<p>What is R in the context of COMM 3710?</p>
-</blockquote>
-<p>In this course, you will learn to use R for data analysis. In other words, R is the software that you will primarily use in COMM 3710 lab.</p>
-</section>
-<section id="why-r" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="why-r"><span class="header-section-number">1.2</span> Why R?<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<p>Increasingly, data are important components of decision-making. Whether you are looking at industry trends, generating financial statements and reports, analyzing market data, or creating visuals to communicate your work, you will need to know how to analyze data to efficiently, accurately, and professionally to develop reports and effectively communicate your findings.</p>
-<p>R is a tool that can help you do all this and more. This course will help you become familiar with this powerful data analysis tool. Often, students ask why we use R instead of Microsoft Excel in this course.</p>
-<p>Here are some reasons for using R over Excel.</p>
-<section id="ease-of-use" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="ease-of-use"><span class="header-section-number">1.2.1</span> Ease of Use</h3>
-<p>There is little doubt that Excel is much easier to use than R. Most of us already know many Excel basics and the learning curve is minimal compared to R. This is partly due to the point-and-click nature of Excel, allowing us to make simple charts and tables.</p>
-<p>R, on the other hand, is a <strong>programming language</strong>. This means that the initial learning curve is, for most, likely to be steeper than that of Excel. However, with practice and time, R becomes easier quickly and you will soon realize that R is a powerful tool for analysis and generating visuals from data.</p>
-</section>
-<section id="replicating-analysis" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="replicating-analysis"><span class="header-section-number">1.2.2</span> Replicating Analysis</h3>
-<p>Having to use the point-and-click interface, or the graphical user interface (GUI), is a distinct disadvantage of Excel. Because you cannot import or use scripts, which are a collection of commands, <strong>in Excel, you must rely on memory to replicate your analysis</strong>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In Excel, you must rely on memory to replicate data analysis. In R, you can simply re-run your saved script.</p>
-</div>
-</div>
-<p>R, on the other hand, is capable of reproducing analyses quickly and with different datasets. The commands for data analysis that you use in R can be saved as a script, which can then be run on multiple datasets. In other words, when we use R for data analysis, we do not have to “reinvent the (data analysis) wheel” as you would with Excel.</p>
-</section>
-<section id="visualization" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="visualization"><span class="header-section-number">1.2.3</span> Visualization</h3>
-<p>For simple graphics, Excel (with its minimal learning curve) can suffice. However, it is cumbersome to create attractive and professional-quality tables and figures in Excel.</p>
-<p>Visualization is where R excels (hah, see what I did there!). When datasets begin to get complicated or large, R is better equipped to handle them without making errors and can create impressive and easily customizable visual representations.</p>
-</section>
-<section id="still-wondering-why-we-use-r" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="still-wondering-why-we-use-r"><span class="header-section-number">1.2.4</span> Still wondering why we use R?</h3>
-<p>If you are still wondering why we are using R instead of Microsoft Excel for data analysis in this course, here are some examples that help illustrate the utility of R over Excel.</p>
+<section id="learning-outcomes" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">10.1</span> Learning Outcomes</h2>
+<p>In this assignment, you will learn how to:</p>
 <ul>
-<li><a href="https://medium.com/bbc-visual-and-data-journalism/how-the-bbc-visual-and-data-journalism-team-works-with-graphics-in-r-ed0b35693535">How the BBC Visual and Data Journalism team works with graphics in R</a></li>
-<li><a href="https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646">The Reinhart-Rogoff error - or How Not to Excel at Economics</a></li>
+<li>Run and examine frequency distributions using the <code>freq()</code> function in the <code>summarytools</code> package.</li>
+<li>View descriptive statistics using the <code>descr()</code> function in the <code>summarytools</code> package.</li>
+<li>Recoding variables using the <code>case_when()</code> function.</li>
+<li>Create new variables from existing variables in a data frame using the <code>mutate()</code> function.</li>
 </ul>
-</section>
-</section>
-<section id="r-vs.-rstudio-vs.-posit-cloud" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="r-vs.-rstudio-vs.-posit-cloud"><span class="header-section-number">1.3</span> R vs.&nbsp;RStudio vs.&nbsp;Posit Cloud</h2>
-<p><a href="#fig-diffs" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> is a good illustration of the distinction between R and RStudio <span class="citation" data-cites="ismayStatisticalInferenceData2021">(<a href="#ref-ismayStatisticalInferenceData2021" role="doc-biblioref">Ismay and Kim 2021</a>)</span>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-diffs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-diffs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/R-vs-RStudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diffs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Analogy of the difference betweenR and RStudio. Source: <a href="https://moderndive.com/1-getting-started.html">ModernDive Chapter 1</a>.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Throughout this course, you will be using R via <a href="https://www.rstudio.com">RStudio</a> or <a href="https://posit.cloud/">Posit Cloud</a>. This means that you will need to have <strong>both R and RStudio installed on your computer</strong>. If you are using Posit Cloud, you will not need to install anything on your computer.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -340,27 +258,86 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you are using RStudio, you will need to install R and RStudio on your computer. If you are using Posit Cloud, you will not need to install anything on your computer.</p>
-</div>
-</div>
-<p>New users often confuse R and RStudio. The analogy makes it clear that one cannot be functional without the other. Just like the dashboard of a car would not be functional without the engine and vice versa, RStudio and R are not functional without each other.</p>
-<p>Remember that R is a programming language for statistical computing and graphics. RStudio, on the other hand, is an <em>integrated development environment (IDE)</em> that provides an interface and adds convenient features. Just like your dashboard has an odometer, navigation system, etc., that makes driving easier, using RStudio’s interface makes statistical computing using R much easier.</p>
-<p>Part of this <a href="https://youtu.be/ZvPFKfNHBNQ">video</a> by Andy Field describes the difference between R and RStudio. This video will also show you how to install R and RStudio, which are covered in <a href="01_get-started.html#sec-installR" class="quarto-xref"><span>Section 2.1</span></a>.</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-ismayStatisticalInferenceData2021" class="csl-entry" role="listitem">
-Ismay, Chester, and Albert Y. Kim. 2021. <em>Statistical <span>Inference</span> via <span>Data Science</span></em>. <a href="https://moderndive.com/">https://moderndive.com/</a>.
+<p>Read all the instructions carefully before starting the assignment.</p>
 </div>
 </div>
 </section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>https://www.r-project.org/about.html<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Adapted from <a href="https://www.northeastern.edu/graduate/blog/r-vs-excel/">R vs.&nbsp;Excel: What’s the Difference?</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<section id="instructions" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="instructions"><span class="header-section-number">10.2</span> Instructions</h2>
+<ol type="1">
+<li><p>Install (<code>install.packages()</code>) and load (<code>library()</code>) the packages below. Then download <code>wind-turbines.csv</code> dataset from Canvas and read it in to R. You will also want to download the codebook for the data from Canvas.</p>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>summarytools</code></li>
+<li><code>rstatix</code></li>
+</ul></li>
+<li><p>The dataset includes data about wind turbines in the US. Use the <code>freq()</code> function to examine the frequency distributions of the variables <code>Site.State</code> and <code>Year</code>. Use the frequency distributions to answer the following questions.</p>
+<ol type="a">
+<li>How many wind turbines are located in Utah?</li>
+<li>How many wind turbines became operational in 2021?</li>
+<li>What percentage of turbines became operational between 1983 and 1999 (include these years in the calculation)?</li>
+</ol></li>
+<li><p>Now, subset the data to answer the following question: How many turbines in Utah have been operational since 2010?</p></li>
+<li><p>Examine the frequency distribution of <code>Turbine.Capacity</code> based on the subset in #3.</p>
+<ol type="a">
+<li>How many turbines in this subset have a capacity of 2,300 kW?</li>
+<li>What percentage of turbines in this subset have a capacity of 1,500 kW?</li>
+</ol></li>
+<li><p>Often, we want to look at descriptive statistics of a quantitative variable. We can do this using the <code>descr()</code> function that is in the package <code>summarytools</code>. Examine the descriptive statistics for <code>Turbine.Total_Height</code> and answer the questions below. Include the units of measurement in your answers.</p>
+<ol type="a">
+<li>What is the mean?</li>
+<li>What is the median?</li>
+<li>What is the maximum?</li>
+</ol></li>
+<li><p>Next, we will learn how to use the function, <code>mutate()</code>. We use this function to create new variables (or “mutate” them) from existing ones. Let’s create a new variable called <code>Turbine_Space</code> that is the mean of two existing variables, <code>Turbine.Hub_Height</code> and <code>Turbine.Rotor_Diameter</code>. Then, examine the descriptive statistics of the new variable, <code>Turbine_Space</code>, and answer the following questions:</p>
+<ol type="a">
+<li>What is the mean of <code>Turbine_Space</code>?</li>
+<li>What is the minimum value of <code>Turbine_Space</code>?</li>
+<li>What is the maximum value of <code>Turbine_Space</code>?</li>
+</ol></li>
+<li><p>Sometimes, we may want to make continuous variables into categorical variables. For example, let’s say we are interested in the number of turbines in a project, <code>Project.Number_Turbines</code>, but we want to categorize them into low vs.&nbsp;high numbers of turbines in projects.<br>
+<br>
+We refer to this process as <strong>recoding variables</strong>. For this exercise, let’s recode projects with 100 turbines or less into the <code>low</code> category and those that have more than 100 turbines into the <code>high</code> category.<br>
+<br>
+Use the <code>mutate()</code> and <code>case_when()</code> functions to recode <code>Project.Number_Turbines</code> into a new variable, <code>Project.Number</code>, with only two categories, low (<span class="math inline">\(\le\)</span> 100) and high (<span class="math inline">\(&gt;\)</span> 100). Then, answer the following questions.</p>
+<ol type="a">
+<li>How many projects are in the <strong>low</strong> category?</li>
+<li>How many projects are in the <strong>high</strong> category?</li>
+</ol></li>
+<li><p><strong>BONUS:</strong> In the previous step, you created a new variable called <code>Project.Number</code>. What is the mean <code>Project.Capacity</code> among projects in the (a) low and (b) high <code>Project.Number</code> categories?</p></li>
 </ol>
+</section>
+<section id="submission" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="submission"><span class="header-section-number">10.3</span> Submission</h2>
+<p>Submit your R script (named <code>LA-#_FirstName-LastName.R</code>) to Canvas.</p>
+<p>Your R script should:</p>
+<ol type="1">
+<li>Include commands and functions that are necessary to address all the questions in the assignment.</li>
+<li>Contain comments that answer the questions in the assignment.</li>
+<li>Run in its entirety without errors.</li>
+</ol>
+<p>To ensure that your R script runs without errors, you should:</p>
+<ul>
+<li>Save your script.</li>
+<li>Navigate back to Your Workspace on Posit Cloud.</li>
+<li>Reopen your project.</li>
+<li>Run the entire script line-by-line without editing it to ensure there are no errors.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.</p>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -783,10 +760,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./LA-4-textbook.html" class="pagination-link" aria-label="LA-4: Data Wrangling">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">LA-4: Data Wrangling</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_get-started.html" class="pagination-link" aria-label="Getting Started">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./LA-6-textbook.html" class="pagination-link" aria-label="LA-6: Data Visualization">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LA-6: Data Visualization</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

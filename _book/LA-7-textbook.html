@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sara K. Yeo">
-<meta name="dcterms.date" content="2025-07-01">
 
-<title>COMM 3710: Getting Started with R</title>
+<title>12&nbsp; LA-7: Examining Relationships – COMM 3710: Getting Started with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -52,7 +64,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_get-started.html" rel="next">
+<link href="./LA-8-textbook.html" rel="next">
+<link href="./LA-6-textbook.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -90,6 +103,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -102,7 +144,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LA-7-textbook.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LA-7: Examining Relationships</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -129,7 +171,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -184,7 +226,25 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./LA-5-textbook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LA-5: Examining and Managing Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LA-5: More Data Wrangling</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LA-6-textbook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LA-6: Data Visualization</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LA-7-textbook.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LA-7: Examining Relationships</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./LA-8-textbook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LA-8: Practice Data Analysis</span></span></a>
   </div>
 </li>
     </ul>
@@ -197,17 +257,15 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes"><span class="header-section-number">12.1</span> Learning Outcomes</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">12.2</span> Instructions</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">12.3</span> Submission</a></li>
+  <li><a href="#selecting-a-statistical-test" id="toc-selecting-a-statistical-test" class="nav-link" data-scroll-target="#selecting-a-statistical-test"><span class="header-section-number">12.4</span> Selecting a Statistical Test</a></li>
+  <li><a href="#conducting-a-statistical-test-in-r" id="toc-conducting-a-statistical-test-in-r" class="nav-link" data-scroll-target="#conducting-a-statistical-test-in-r"><span class="header-section-number">12.5</span> Conducting a Statistical Test in R</a>
   <ul class="collapse">
-  <li><a href="#what-is-r" id="toc-what-is-r" class="nav-link" data-scroll-target="#what-is-r"><span class="header-section-number">1.1</span> What is R?</a></li>
-  <li><a href="#why-r" id="toc-why-r" class="nav-link" data-scroll-target="#why-r"><span class="header-section-number">1.2</span> Why R?</a>
-  <ul class="collapse">
-  <li><a href="#ease-of-use" id="toc-ease-of-use" class="nav-link" data-scroll-target="#ease-of-use"><span class="header-section-number">1.2.1</span> Ease of Use</a></li>
-  <li><a href="#replicating-analysis" id="toc-replicating-analysis" class="nav-link" data-scroll-target="#replicating-analysis"><span class="header-section-number">1.2.2</span> Replicating Analysis</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">1.2.3</span> Visualization</a></li>
-  <li><a href="#still-wondering-why-we-use-r" id="toc-still-wondering-why-we-use-r" class="nav-link" data-scroll-target="#still-wondering-why-we-use-r"><span class="header-section-number">1.2.4</span> Still wondering why we use R?</a></li>
-  </ul></li>
-  <li><a href="#r-vs.-rstudio-vs.-posit-cloud" id="toc-r-vs.-rstudio-vs.-posit-cloud" class="nav-link" data-scroll-target="#r-vs.-rstudio-vs.-posit-cloud"><span class="header-section-number">1.3</span> R vs.&nbsp;RStudio vs.&nbsp;Posit Cloud</a></li>
+  <li><a href="#chi-squared-test" id="toc-chi-squared-test" class="nav-link" data-scroll-target="#chi-squared-test"><span class="header-section-number">12.5.1</span> Chi-squared test</a></li>
+  <li><a href="#t-test" id="toc-t-test" class="nav-link" data-scroll-target="#t-test"><span class="header-section-number">12.5.2</span> <em>t</em>-test</a></li>
+  <li><a href="#analysis-of-variance-anova" id="toc-analysis-of-variance-anova" class="nav-link" data-scroll-target="#analysis-of-variance-anova"><span class="header-section-number">12.5.3</span> Analysis of variance (ANOVA)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -217,26 +275,14 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">COMM 3710: Getting Started with R</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LA-7: Examining Relationships</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Sara K. Yeo </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -246,121 +292,166 @@ div.csl-indent {
 </header>
 
 
-<section id="intro" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>This is a guide for getting started and using R on <a href="https://posit.cloud/">Posit Cloud</a> or <a href="https://posit.co/products/open-source/rstudio/?sid=1">RStudio</a> in COMM 3710: Introduction to Quantitative Communication Research in the <a href="https://communication.utah.edu/">Department of Communication</a> at the <a href="https://www.utah.edu/">University of Utah</a>.</p>
-<section id="what-is-r" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-r"><span class="header-section-number">1.1</span> What is R?</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>“R is a language and environment for statistical computing and graphics.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</div>
-</div>
-<p>R is a free software environment for computing and graphics from <a href="https://cloud.r-project.org/">CRAN</a>, the Comprehensive R Archive Network. You can always read more about R by visiting the homepage of the <a href="https://www.r-project.org/">R Project for Statistical Computing</a> but you are probably more interested in the answer to the following question:</p>
-<blockquote class="blockquote">
-<p>What is R in the context of COMM 3710?</p>
-</blockquote>
-<p>In this course, you will learn to use R for data analysis. In other words, R is the software that you will primarily use in COMM 3710 lab.</p>
-</section>
-<section id="why-r" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="why-r"><span class="header-section-number">1.2</span> Why R?<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<p>Increasingly, data are important components of decision-making. Whether you are looking at industry trends, generating financial statements and reports, analyzing market data, or creating visuals to communicate your work, you will need to know how to analyze data to efficiently, accurately, and professionally to develop reports and effectively communicate your findings.</p>
-<p>R is a tool that can help you do all this and more. This course will help you become familiar with this powerful data analysis tool. Often, students ask why we use R instead of Microsoft Excel in this course.</p>
-<p>Here are some reasons for using R over Excel.</p>
-<section id="ease-of-use" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="ease-of-use"><span class="header-section-number">1.2.1</span> Ease of Use</h3>
-<p>There is little doubt that Excel is much easier to use than R. Most of us already know many Excel basics and the learning curve is minimal compared to R. This is partly due to the point-and-click nature of Excel, allowing us to make simple charts and tables.</p>
-<p>R, on the other hand, is a <strong>programming language</strong>. This means that the initial learning curve is, for most, likely to be steeper than that of Excel. However, with practice and time, R becomes easier quickly and you will soon realize that R is a powerful tool for analysis and generating visuals from data.</p>
-</section>
-<section id="replicating-analysis" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="replicating-analysis"><span class="header-section-number">1.2.2</span> Replicating Analysis</h3>
-<p>Having to use the point-and-click interface, or the graphical user interface (GUI), is a distinct disadvantage of Excel. Because you cannot import or use scripts, which are a collection of commands, <strong>in Excel, you must rely on memory to replicate your analysis</strong>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In Excel, you must rely on memory to replicate data analysis. In R, you can simply re-run your saved script.</p>
-</div>
-</div>
-<p>R, on the other hand, is capable of reproducing analyses quickly and with different datasets. The commands for data analysis that you use in R can be saved as a script, which can then be run on multiple datasets. In other words, when we use R for data analysis, we do not have to “reinvent the (data analysis) wheel” as you would with Excel.</p>
-</section>
-<section id="visualization" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="visualization"><span class="header-section-number">1.2.3</span> Visualization</h3>
-<p>For simple graphics, Excel (with its minimal learning curve) can suffice. However, it is cumbersome to create attractive and professional-quality tables and figures in Excel.</p>
-<p>Visualization is where R excels (hah, see what I did there!). When datasets begin to get complicated or large, R is better equipped to handle them without making errors and can create impressive and easily customizable visual representations.</p>
-</section>
-<section id="still-wondering-why-we-use-r" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="still-wondering-why-we-use-r"><span class="header-section-number">1.2.4</span> Still wondering why we use R?</h3>
-<p>If you are still wondering why we are using R instead of Microsoft Excel for data analysis in this course, here are some examples that help illustrate the utility of R over Excel.</p>
+<section id="learning-outcomes" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">12.1</span> Learning Outcomes</h2>
+<p>In this assignment, you will:</p>
 <ul>
-<li><a href="https://medium.com/bbc-visual-and-data-journalism/how-the-bbc-visual-and-data-journalism-team-works-with-graphics-in-r-ed0b35693535">How the BBC Visual and Data Journalism team works with graphics in R</a></li>
-<li><a href="https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646">The Reinhart-Rogoff error - or How Not to Excel at Economics</a></li>
+<li>Select the appropriate statistical test.</li>
+<li>Conduct a statistical test.</li>
+<li>Interpret the results of a statistical test.</li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read all the instructions carefully before starting the assignment.</p>
+</div>
+</div>
 </section>
+<section id="instructions" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="instructions"><span class="header-section-number">12.2</span> Instructions</h2>
+<ol type="1">
+<li><p>Load the packages below and download the <code>covid.csv</code> data file from Canvas. Read the dataset into R. Use the codebook on Canvas to familiarize yourself with the data in this file.</p>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>summarytools</code></li>
+<li><code>rstatix</code></li>
+</ul></li>
+<li><p>Create a new variable called <code>region</code>. Have the variable equal <code>Americas</code> if the country is Brazil, Canada, Mexico, or the United States. Have the variable equal <code>Asia</code> if the country is China, India, Japan, Singapore, or South Korea. Have the variable equal <code>Europe</code> is the country is Denmark, France, Germany, Italy, or Spain. Run a frequency distribution of region. Which region has the highest frequency?</p></li>
+<li><p>Let’s say we want to conduct a statistical test to determine whether the total number of contacts people had on the previous day differs by region. First, answer the questions below. Be sure to include your answers as comments in your R file.</p>
+<ol type="a">
+<li>Which variables are involved in this statistical test? Which is the independent variable? Which is the dependent variable?</li>
+<li>Run a frequency distribution of <code>total_contacts</code>. Is this variable categorical or continuous?</li>
+<li>Is the variable <code>region</code> continuous or categorical?</li>
+<li>Given your answers to the previous questions, what statistical test should you use? Why? Refer to the flowchart (<a href="#fig-select-test" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>) to help select a statistical test.</li>
+</ol></li>
+<li><p>Conduct the statistical test from your answer to 3d. Answer the following questions.</p>
+<ol type="a">
+<li>What is the test statistic and the probability value (i.e., <em>p</em>-value) associated with that test statistic?</li>
+<li>Based on the test statistic and the <em>p</em>-value, do the number of total contacts differ by region?</li>
+</ol></li>
+<li><p>Next, let’s compare how mask-wearing differs between the first and second year after the COVID outbreak. Follow the steps below to select and conduct the appropriate statistical test.</p>
+<ol type="a">
+<li>State your hypothesis. Do you think more people wore masks when they went outside in the first or second year after the outbreak? Why?</li>
+<li>Identify the dependent variable. Is it continuous or categorical?</li>
+<li>What variable can you use to create the independent variable? Describe how you might recode an existing variable to create the independent variable. Then, create this new variable using the <code>mutate()</code> and <code>case_when()</code> functions. Is this new variable continuous or categorical?</li>
+<li>Select (<a href="#fig-select-test" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>) and conduct the appropriate statistical test.</li>
+<li>Report the test statistic and probability value as a comment in your R script.</li>
+<li>Calculate the means and standard deviations of the dependent variable for the first and second years after the COVID outbreak. Include these descriptive statistics in your R script. Did people wear masks more often when they went outside in the first or second year after the outbreak?</li>
+<li>Does the statistical test support your hypothesis?</li>
+</ol></li>
+</ol>
 </section>
-<section id="r-vs.-rstudio-vs.-posit-cloud" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="r-vs.-rstudio-vs.-posit-cloud"><span class="header-section-number">1.3</span> R vs.&nbsp;RStudio vs.&nbsp;Posit Cloud</h2>
-<p><a href="#fig-diffs" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> is a good illustration of the distinction between R and RStudio <span class="citation" data-cites="ismayStatisticalInferenceData2021">(<a href="#ref-ismayStatisticalInferenceData2021" role="doc-biblioref">Ismay and Kim 2021</a>)</span>.</p>
+<section id="submission" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="submission"><span class="header-section-number">12.3</span> Submission</h2>
+<p>Submit your R script (named <code>LA-#_FirstName-LastName.R</code>) to Canvas.</p>
+<p>Your R script should:</p>
+<ol type="1">
+<li>Include commands and functions that are necessary to address all the questions in the assignment.</li>
+<li>Contain comments that answer the questions in the assignment.</li>
+<li>Run in its entirety without errors.</li>
+</ol>
+<p>To ensure that your R script runs without errors, you should:</p>
+<ul>
+<li>Save your script.</li>
+<li>Navigate back to Your Workspace on Posit Cloud.</li>
+<li>Reopen your project.</li>
+<li>Run the entire script line-by-line without editing it to ensure there are no errors.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.</p>
+</div>
+</div>
+</section>
+<section id="selecting-a-statistical-test" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="selecting-a-statistical-test"><span class="header-section-number">12.4</span> Selecting a Statistical Test</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-diffs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-select-test" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-diffs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/R-vs-RStudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<div aria-describedby="fig-select-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/selecting-stats-test.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diffs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Analogy of the difference betweenR and RStudio. Source: <a href="https://moderndive.com/1-getting-started.html">ModernDive Chapter 1</a>.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-select-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: Selecting a statistical test.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Throughout this course, you will be using R via <a href="https://www.rstudio.com">RStudio</a> or <a href="https://posit.cloud/">Posit Cloud</a>. This means that you will need to have <strong>both R and RStudio installed on your computer</strong>. If you are using Posit Cloud, you will not need to install anything on your computer.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</section>
+<section id="conducting-a-statistical-test-in-r" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="conducting-a-statistical-test-in-r"><span class="header-section-number">12.5</span> Conducting a Statistical Test in R</h2>
+<section id="chi-squared-test" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="chi-squared-test"><span class="header-section-number">12.5.1</span> Chi-squared test</h3>
+<p>A chi-squared test is used when we want to compare two categorical variables. To do so in R, you can use the following command (<code>df</code>, <code>dep_var</code>, and <code>ind_var</code> have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq_test</span>(<span class="at">x =</span> df<span class="sc">$</span>ind_var, <span class="at">y =</span> df<span class="sc">$</span>dep_var)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1 × 6</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#       n statistic         p    df method          p.signif</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># * &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;           &lt;chr&gt;   </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1   291      22.5 0.0000133     2 Chi-square test **** </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
+<p>To report the results of your chi-squared test in APA format, you would use the following format, replacing the text in bold font with the results from your Console:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(\chi^2\)</span>(<strong><code>df</code></strong>, <span class="math inline">\(N\)</span> = <strong><code>n</code></strong>) = <strong><code>statistic</code></strong>, <em>p</em> = <strong><code>p</code></strong></p>
+</blockquote>
+<p>From the results of the above chi-squared test, I would report results like this: <span class="math inline">\(\chi^2(df = 2, N = 291) = 22.5\)</span>, <span class="math inline">\(p &lt; .001\)</span>. If the <em>p</em>-value is less than .001, you do not need to report the exact value. If it is greater than .001, then report the exact value rounded to two or three decimal places.</p>
+</section>
+<section id="t-test" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="t-test"><span class="header-section-number">12.5.2</span> <em>t</em>-test</h3>
+<p>A <em>t</em>-test is used to compare the mean values of a continuous variable between two groups. To do so in R, you can use the following command (<code>df</code>, <code>dep_var</code>, and <code>ind_var</code> have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">t_test</span>(dep_var <span class="sc">~</span> ind_var)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1 × 10</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   .y.        group1 group2    n1    n2 statistic    df        p    p.adj p.adj.signif</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># * &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;       </span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 dep_var ind_var1  ind_var2  54    70     -12.2  122. 6.49e-23 6.49e-23 ****   </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>To report the results of your chi-squared test in APA format, you would use the following format, replacing the text in bold font with the results from your Console:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(t\)</span>(<strong><code>df</code></strong>) = <strong><code>statistic</code></strong>, <em>p</em> = <strong><code>p</code></strong></p>
+</blockquote>
+<p>Using the results above, I would report the results of a <em>t</em>-test like this: <span class="math inline">\(t(df = 122) = -12.2\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
+</section>
+<section id="analysis-of-variance-anova" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="analysis-of-variance-anova"><span class="header-section-number">12.5.3</span> Analysis of variance (ANOVA)</h3>
+<p>ANOVA is used when we want to compare the mean values of continuous variable between more than two groups. To do so in R, you can use the following command (<code>df</code>, <code>dep_var</code>, and <code>ind_var</code> have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">anova_test</span>(dep_var <span class="sc">~</span> ind_var)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ANOVA Table (type II tests)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   Effect  DFn DFd     F        p p&lt;.05   ges</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 ind_var   2 157 7.505 0.000771     * 0.087</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-body-container callout-body">
-<p>If you are using RStudio, you will need to install R and RStudio on your computer. If you are using Posit Cloud, you will not need to install anything on your computer.</p>
-</div>
-</div>
-<p>New users often confuse R and RStudio. The analogy makes it clear that one cannot be functional without the other. Just like the dashboard of a car would not be functional without the engine and vice versa, RStudio and R are not functional without each other.</p>
-<p>Remember that R is a programming language for statistical computing and graphics. RStudio, on the other hand, is an <em>integrated development environment (IDE)</em> that provides an interface and adds convenient features. Just like your dashboard has an odometer, navigation system, etc., that makes driving easier, using RStudio’s interface makes statistical computing using R much easier.</p>
-<p>Part of this <a href="https://youtu.be/ZvPFKfNHBNQ">video</a> by Andy Field describes the difference between R and RStudio. This video will also show you how to install R and RStudio, which are covered in <a href="01_get-started.html#sec-installR" class="quarto-xref"><span>Section 2.1</span></a>.</p>
+<p>To report the results in APA format:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(F\)</span> (<code>DFn</code>, <code>DFd</code>) = <code>F-value</code>, <span class="math inline">\(p =\)</span> <code>p-value</code></p>
+</blockquote>
+<p>Using the results above, I would report: <span class="math inline">\(F(2, 157) = 7.51\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-ismayStatisticalInferenceData2021" class="csl-entry" role="listitem">
-Ismay, Chester, and Albert Y. Kim. 2021. <em>Statistical <span>Inference</span> via <span>Data Science</span></em>. <a href="https://moderndive.com/">https://moderndive.com/</a>.
-</div>
-</div>
 </section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>https://www.r-project.org/about.html<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Adapted from <a href="https://www.northeastern.edu/graduate/blog/r-vs-excel/">R vs.&nbsp;Excel: What’s the Difference?</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
@@ -783,10 +874,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./LA-6-textbook.html" class="pagination-link" aria-label="LA-6: Data Visualization">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LA-6: Data Visualization</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_get-started.html" class="pagination-link" aria-label="Getting Started">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./LA-8-textbook.html" class="pagination-link" aria-label="LA-8: Practice Data Analysis">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LA-8: Practice Data Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
