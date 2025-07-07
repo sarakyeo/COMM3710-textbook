@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Assignment Setup – COMM 3710: Getting Started with R</title>
+<title>8&nbsp; LA-3: Working with Data – COMM 3710: Getting Started with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03_tips.html" rel="next">
-<link href="./01_get-started.html" rel="prev">
+<link href="./LA-4-textbook.html" rel="next">
+<link href="./LA-2-textbook.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -102,36 +68,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+
 
 </head>
 
@@ -144,7 +85,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_setup.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Assignment Setup</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LA-3-textbook.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">LA-3: Working with Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -183,7 +124,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_setup.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Assignment Setup</span></span></a>
   </div>
 </li>
@@ -213,7 +154,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LA-3-textbook.html" class="sidebar-item-text sidebar-link">
+  <a href="./LA-3-textbook.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">LA-3: Working with Data</span></span></a>
   </div>
 </li>
@@ -233,14 +174,14 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#open-rstudio-or-posit-cloud" id="toc-open-rstudio-or-posit-cloud" class="nav-link active" data-scroll-target="#open-rstudio-or-posit-cloud"><span class="header-section-number">3.1</span> Open RStudio or Posit Cloud</a></li>
-  <li><a href="#create-a-new-r-script" id="toc-create-a-new-r-script" class="nav-link" data-scroll-target="#create-a-new-r-script"><span class="header-section-number">3.2</span> Create a new R script</a></li>
-  <li><a href="#prepare-r-script" id="toc-prepare-r-script" class="nav-link" data-scroll-target="#prepare-r-script"><span class="header-section-number">3.3</span> Prepare R script</a></li>
-  <li><a href="#creating-foldable-code-sections" id="toc-creating-foldable-code-sections" class="nav-link" data-scroll-target="#creating-foldable-code-sections"><span class="header-section-number">3.4</span> Creating foldable code sections</a></li>
-  <li><a href="#install-and-load-packages" id="toc-install-and-load-packages" class="nav-link" data-scroll-target="#install-and-load-packages"><span class="header-section-number">3.5</span> Install and load packages</a></li>
-  <li><a href="#sec-saveRscript" id="toc-sec-saveRscript" class="nav-link" data-scroll-target="#sec-saveRscript"><span class="header-section-number">3.6</span> Saving your R script</a></li>
-  <li><a href="#sec-positexport" id="toc-sec-positexport" class="nav-link" data-scroll-target="#sec-positexport"><span class="header-section-number">3.7</span> Exporting R file from Posit Cloud</a></li>
-  <li><a href="#r-script-checklist-for-lab-assignments" id="toc-r-script-checklist-for-lab-assignments" class="nav-link" data-scroll-target="#r-script-checklist-for-lab-assignments"><span class="header-section-number">3.8</span> R script checklist for lab assignments</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes"><span class="header-section-number">8.1</span> Learning Outcomes</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">8.2</span> Setup</a></li>
+  <li><a href="#entering-data-manually" id="toc-entering-data-manually" class="nav-link" data-scroll-target="#entering-data-manually"><span class="header-section-number">8.3</span> Entering Data Manually</a></li>
+  <li><a href="#examining-types-of-data" id="toc-examining-types-of-data" class="nav-link" data-scroll-target="#examining-types-of-data"><span class="header-section-number">8.4</span> Examining Types of Data</a></li>
+  <li><a href="#the-learnr-tutorial" id="toc-the-learnr-tutorial" class="nav-link" data-scroll-target="#the-learnr-tutorial"><span class="header-section-number">9</span> The <code>learnr</code> Tutorial</a>
+  <ul class="collapse">
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">9.1</span> Submission</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -249,7 +190,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-setup" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Assignment Setup</span></span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">LA-3: Working with Data</span></h1>
 </div>
 
 
@@ -266,81 +207,31 @@ window.Quarto = {
 </header>
 
 
-<p>In this course you will use R for lab assignments. This chapter walks you through setting up R in preparation for completing assignments. Although you may have to refer to this chapter the first few times you set up R, you will soon become accustomed to the process and it will be a natural part of your workflow.</p>
-<section id="open-rstudio-or-posit-cloud" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="open-rstudio-or-posit-cloud"><span class="header-section-number">3.1</span> Open RStudio or Posit Cloud</h2>
-<p>Remember that R is the engine while RStudio is your dashboard. If you are using Posit Cloud, your engine is already integrated and you only need to navigate to the dashboard on the Posit Cloud website.</p>
-<p>This is analogous to when you head out in a car; you don’t start by tinkering with the engine. Instead, you use the car via its dashboard.</p>
-<p>Similarly, we will interact and use R through RStudio or Posit Cloud.</p>
+<section id="learning-outcomes" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">8.1</span> Learning Outcomes</h2>
+<p>In this assignment, you will learn how to:</p>
+<ul>
+<li>Create a new R script.</li>
+<li>Prepare your R script for your assignment.</li>
+<li>Create headers in your R script.</li>
+<li>Install and load packages in R.</li>
+<li>Open a help page in R.</li>
+<li>Manually enter data into R.</li>
+<li>Look at the contents of a data frame or tibble.</li>
+<li>Identify variables and their types in a tibble.</li>
+</ul>
 </section>
-<section id="create-a-new-r-script" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="create-a-new-r-script"><span class="header-section-number">3.2</span> Create a new R script</h2>
-<p>To start a new R script, use the <em>File</em> menu or the shortcut keys Ctrl + Shift + N (Windows) or Cmd + Shift + N (Mac).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can also use your mouse to point-and-click to open a new file in RStudio (<a href="#fig-newscript" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>) or Posit Cloud (<a href="#fig-newpositscript" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-newscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/new-R-script.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Open a new R script in RStudio.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-newpositscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-newpositscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/posit-new-file.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newpositscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.2: Open a new R script in Posit Cloud.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="prepare-r-script" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="prepare-r-script"><span class="header-section-number">3.3</span> Prepare R script</h2>
-<p>To prepare your R script, use comments to type any relevant information about the script. Examples of relevant information include your name, your course, the semester during which you are enrolled in this course, the assignment name.</p>
-<p>Comments in R are denoted by the hashtag symbol, <code>#</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## This is a comment.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Name: Test Student</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># UNID: u0000000</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Section: 002</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Assignment: LA-3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Once you have included information about your script as comments, you can move on to creating foldable code sections.</p>
-</section>
-<section id="creating-foldable-code-sections" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="creating-foldable-code-sections"><span class="header-section-number">3.4</span> Creating foldable code sections</h2>
-<p>You can also create sections of foldable code in RStudio (<code>Code</code> &gt; <code>Insert Section...</code>). <a href="#fig-fold" class="quarto-xref">Figure&nbsp;<span>3.3</span></a> below shows you how. Once you have created a section, you can collapse it by clicking the arrows next to the line numbers in the script pane.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-fold" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/R-foldable-code.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.3: Creating sections of foldable code.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="install-and-load-packages" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="install-and-load-packages"><span class="header-section-number">3.5</span> Install and load packages</h2>
-<p>Next, you need to install and load the R packages you will be using for this R session. Refer to <a href="01_get-started.html#sec-packages" class="quarto-xref"><span>Section 2.4.5</span></a> for more information about installing vs.&nbsp;loading packages.</p>
-<p>Remember that you only need to install packages once but you need to load packages each time you open R.</p>
+<section id="setup" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="setup"><span class="header-section-number">8.2</span> Setup</h2>
+<ol type="1">
+<li>Create a new R script and set it up for your assignment. In the first four (4) lines of your script, include the following, each on a new line, as a comment:</li>
+</ol>
+<ul>
+<li>Full name</li>
+<li>Student ID (u########)</li>
+<li>Date (MM/DD/YY)</li>
+<li>Assignment name</li>
+</ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -351,80 +242,162 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The functions to install and load packages are <code>install.packages()</code> and <code>library()</code>, respectively.</p>
+<p>Comments (text preceded by <code>#</code> in your R script) are not run or executed. R will only run/execute commands or functions (text not preceded by <code>#</code>).</p>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the tidyverse package</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the tidyverse package (after installing)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="sec-saveRscript" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="sec-saveRscript"><span class="header-section-number">3.6</span> Saving your R script</h2>
-<p><strong>Be sure to save your work often.</strong></p>
-<p>You are likely familiar with file types like <code>.docx</code> (Word documents), <code>.pdf</code> (PDF documents), and <code>.txt</code> (text files). If you have not worked with R prior to enrolling in this course, you may not have encountered files with the extension <code>.R</code>.</p>
-<p>Files with a <code>.R</code> extension are known as <strong>R scripts</strong>. As noted in <a href="01_get-started.html#sec-tour" class="quarto-xref"><span>Section 2.4.1</span></a>, a R script is simply a text file containing a set of commands and comments.</p>
-<p>To save your script, click the <img src="images/save.png"> icon in RStudio or use the <strong>File</strong> menu (<a href="#fig-save" class="quarto-xref">Figure&nbsp;<span>3.4</span></a>). Give the file a sensible name and click <strong>Save</strong>. The file will be saved as <code>&lt;filename&gt;.R</code> in your working directory.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-save" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-save-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/saving-R-script.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-save-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.4: Saving your R script in Posit Cloud or RStudio.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="sec-positexport" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="sec-positexport"><span class="header-section-number">3.7</span> Exporting R file from Posit Cloud</h2>
-<p>To export your R script from Posit Cloud, follow the instructions below (<a href="#fig-export" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>).</p>
-<ol type="1">
-<li><p>Check the box next to the file you wish to export in the <code>Files</code> pane.</p></li>
-<li><p>In the same pane, click <code>More</code> (top right of the <code>Files</code> pane).</p></li>
-<li><p>Select <code>Export...</code> from the dropdown menu.</p></li>
-<li><p>Be sure to name your file according to the instructions in the assignment, then click <code>Download</code>.</p></li>
+<ol start="2" type="1">
+<li>Make a section of code titled “Installing and loading packages.” Under this heading, write pseudocode in preparation to install and load the following packages:</li>
 </ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-export" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/posit-export-file.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.5: Exporting your R script from Posit Cloud.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="r-script-checklist-for-lab-assignments" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="r-script-checklist-for-lab-assignments"><span class="header-section-number">3.8</span> R script checklist for lab assignments</h2>
-<p>Be sure you have <em>at least</em> the following components in your R script. This list is <strong>not</strong> comprehensive. It represents the minimal requirements for your R script.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Full name and student ID #</label></li>
-<li><label><input type="checkbox">Assignment name/number (e.g., LA.1)</label></li>
-<li><label><input type="checkbox">Annotations explaining your R code</label></li>
-<li><label><input type="checkbox">R commands to install (if necessary) and load packages</label></li>
-<li><label><input type="checkbox">R commands necessary for completion of your assignment</label></li>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>summarytools</code></li>
+<li><code>rstatix</code></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pseudocode is the plain English version of your R code that described the steps you are taking in R. It should be written as comments in your R script and should make sense to you. Your pseudocode is a tool that helps you decide which R function or command you need to accomplish a given task.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><p>Install the packages above using the function, <code>install.packages()</code>. For example, to install the <code>tidyverse</code> package, the command is <code>install.packages("tidyverse")</code>. Remember that typing the command in your R script does not run or execute the function. You must select the text of the function that you want to run and click “Run” in the top right corner of the script pane (or use the shortcut keys).</p></li>
+<li><p>Load the packages. The function to load the packages is <code>library()</code>. To load the <code>tidyverse</code> package, type <code>library(tidyverse)</code> in your script and run it. Note that for each new project you create in Your Workspace on Posit Cloud, you will have to install and load any necessary packages again.</p></li>
+</ol>
+</section>
+<section id="entering-data-manually" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="entering-data-manually"><span class="header-section-number">8.3</span> Entering Data Manually</h2>
+<p>In the next step, we will enter data into R manually using the <code>c()</code> function, which is short for <code>combine()</code>. Before we do so, let’s learn about the function we will be using.</p>
+<ol type="1">
+<li><p>Create a new section of code where you can explore and learn about the <code>c()</code> function.</p></li>
+<li><p>To read the documentation for any function, you can add <code>?</code> in front of the command and run it. This will pull up the documentation (including examples at the very end of the documentation) in the Help tab in the bottom right pane. For example, if I wanted to read the documentation for the <code>library()</code> function, I would run the command: <code>?library()</code>. Copy and paste the description from the Help pane for the <code>c()</code> function in your R script as a comment.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The documentation may not seem helpful at first glance, but once you become more familiar with R and its commands, the Help documentation becomes a useful resource.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Enter the data in the table below as four (4) objects called <code>Aname</code>, <code>Ateam</code>, <code>PPG</code> (points per game), and <code>REB</code> (rebounds per game). There are two data types in the data table, numeric and character. Your TA will show you how to assign the data to the objects.</li>
+</ol>
+<div class="cell">
+<div class="cell-output-display">
+<table class="lightable-classic caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>2023-24 data of top 5 women's college basketball players by points per game (PPG).</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Aname</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ateam</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">PPG</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">REB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">C. Clark</td>
+<td style="text-align: left;">Iowa</td>
+<td style="text-align: right;">31.6</td>
+<td style="text-align: right;">7.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">J. Watkins</td>
+<td style="text-align: left;">USC</td>
+<td style="text-align: right;">27.1</td>
+<td style="text-align: right;">7.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">L. Olsen</td>
+<td style="text-align: left;">Vill</td>
+<td style="text-align: right;">23.2</td>
+<td style="text-align: right;">4.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C. Watson</td>
+<td style="text-align: left;">Buffalo</td>
+<td style="text-align: right;">23.0</td>
+<td style="text-align: right;">5.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E. Kitley</td>
+<td style="text-align: left;">VT</td>
+<td style="text-align: right;">22.8</td>
+<td style="text-align: right;">11.4</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<ol start="4" type="1">
+<li><p>Check that you have created the objects correctly by calling each object. Calling an object in R allows you to see it in the Console. To call an object, type the name of the object in the Console and press Enter. Or type the name of the object in your R script, then highlight and run it. Copy and paste the results of calling the objects into your R script as comments. You can find the output in the Console pane.</p></li>
+<li><p>Combine the objects into a single data frame that has a name of your choosing and look at the data frame. Use the <code>tibble()</code> function to do this. The data in the data frame should match that in Table 1. Call the data frame in the Console. Copy and paste the output as a comment in your R script.</p></li>
+</ol>
+</section>
+<section id="examining-types-of-data" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="examining-types-of-data"><span class="header-section-number">8.4</span> Examining Types of Data</h2>
+<ol type="1">
+<li><p>Now, we will examine the type of data stored in each column of our data frame. To do this, we will use the <code>class()</code> function. Let’s start by reading the documentation for the <code>class()</code> function. Copy and paste the description of this function from the Help pane as a comment in your R script.</p></li>
+<li><p>Determine the class of each column in your data frame. For example, if I wanted to check the class of <code>Aname</code>, I would use the function <code>class()</code> with the arguments: <code>df$Aname</code>. The whole command would look like this: <code>class(df$Aname)</code>. Copy and paste the class of each column in your R script.</p></li>
+</ol>
+</section>
+<section id="the-learnr-tutorial" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> The <code>learnr</code> Tutorial</h1>
+<p>In this last section, we will use a Tutorial that is built into an existing R package.</p>
+<p>Install and load the <code>learnr</code> package in your current session of R. In the Tutorial tab (usually top right with the Environment pane), complete the <strong>Data Basics</strong> tutorial. If you are asked to install packages or dependencies, do so.</p>
+<p>Include the answers to the questions below in your R script as comments. Clearly label your answers with the question number (e.g., a, b). You will answer these questions as part of the Data Basics Tutorial. List the answers from your tutorial as comments in your R script.</p>
+<ol type="a">
+<li>What does the <code>drv</code> variable of <code>mpg</code> describe? Read the help for <code>?mpg</code> to find out.</li>
+<li>How many rows are in the data frame named <code>cars</code>?</li>
+<li>How many columns are in the data frame named <code>cars</code>?</li>
+<li>Which types of variables does <code>flights</code> contain? List all the types that you checked in the tutorial.</li>
+</ol>
+<section id="submission" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="submission"><span class="header-section-number">9.1</span> Submission</h2>
+<p>Submit your R script (named <code>LA-#_FirstName-LastName.R</code>) to Canvas.</p>
+<p>Your R script should:</p>
+<ol type="1">
+<li>Include commands and functions that are necessary to address all the questions in the assignment.</li>
+<li>Contain comments that answer the questions in the assignment.</li>
+<li>Run in its entirety without errors.</li>
+</ol>
+<p>To ensure that your R script runs without errors, you should:</p>
+<ul>
+<li>Save your script.</li>
+<li>Navigate back to Your Workspace on Posit Cloud.</li>
+<li>Reopen your project.</li>
+<li>Run the entire script line-by-line without editing it to ensure there are no errors.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.</p>
+</div>
+</div>
 
 
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Keyboard shortcuts are available under <em>Tools</em> <span class="math inline">\(\rightarrow\)</span> <em>Keyboard Shortcuts Help</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
@@ -847,13 +820,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01_get-started.html" class="pagination-link" aria-label="Getting Started">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span>
+      <a href="./LA-2-textbook.html" class="pagination-link" aria-label="LA-2: Setting Up *R*">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">LA-2: Setting Up <em>R</em></span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03_tips.html" class="pagination-link" aria-label="Tips on Working with R">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tips on Working with R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./LA-4-textbook.html" class="pagination-link" aria-label="LA-4: Data Wrangling">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">LA-4: Data Wrangling</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

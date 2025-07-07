@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Assignment Setup – COMM 3710: Getting Started with R</title>
+<title>9&nbsp; LA-4: Data Wrangling – COMM 3710: Getting Started with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./03_tips.html" rel="next">
-<link href="./01_get-started.html" rel="prev">
+<link href="./LA-3-textbook.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,35 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -144,7 +114,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_setup.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Assignment Setup</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LA-4-textbook.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">LA-4: Data Wrangling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -183,7 +153,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_setup.html" class="sidebar-item-text sidebar-link active">
+  <a href="./02_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Assignment Setup</span></span></a>
   </div>
 </li>
@@ -219,7 +189,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LA-4-textbook.html" class="sidebar-item-text sidebar-link">
+  <a href="./LA-4-textbook.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">LA-4: Data Wrangling</span></span></a>
   </div>
 </li>
@@ -233,14 +203,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#open-rstudio-or-posit-cloud" id="toc-open-rstudio-or-posit-cloud" class="nav-link active" data-scroll-target="#open-rstudio-or-posit-cloud"><span class="header-section-number">3.1</span> Open RStudio or Posit Cloud</a></li>
-  <li><a href="#create-a-new-r-script" id="toc-create-a-new-r-script" class="nav-link" data-scroll-target="#create-a-new-r-script"><span class="header-section-number">3.2</span> Create a new R script</a></li>
-  <li><a href="#prepare-r-script" id="toc-prepare-r-script" class="nav-link" data-scroll-target="#prepare-r-script"><span class="header-section-number">3.3</span> Prepare R script</a></li>
-  <li><a href="#creating-foldable-code-sections" id="toc-creating-foldable-code-sections" class="nav-link" data-scroll-target="#creating-foldable-code-sections"><span class="header-section-number">3.4</span> Creating foldable code sections</a></li>
-  <li><a href="#install-and-load-packages" id="toc-install-and-load-packages" class="nav-link" data-scroll-target="#install-and-load-packages"><span class="header-section-number">3.5</span> Install and load packages</a></li>
-  <li><a href="#sec-saveRscript" id="toc-sec-saveRscript" class="nav-link" data-scroll-target="#sec-saveRscript"><span class="header-section-number">3.6</span> Saving your R script</a></li>
-  <li><a href="#sec-positexport" id="toc-sec-positexport" class="nav-link" data-scroll-target="#sec-positexport"><span class="header-section-number">3.7</span> Exporting R file from Posit Cloud</a></li>
-  <li><a href="#r-script-checklist-for-lab-assignments" id="toc-r-script-checklist-for-lab-assignments" class="nav-link" data-scroll-target="#r-script-checklist-for-lab-assignments"><span class="header-section-number">3.8</span> R script checklist for lab assignments</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes"><span class="header-section-number">9.1</span> Learning Outcomes</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">9.2</span> Instructions</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">9.3</span> Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -249,7 +214,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-setup" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Assignment Setup</span></span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">LA-4: Data Wrangling</span></h1>
 </div>
 
 
@@ -266,81 +231,15 @@ window.Quarto = {
 </header>
 
 
-<p>In this course you will use R for lab assignments. This chapter walks you through setting up R in preparation for completing assignments. Although you may have to refer to this chapter the first few times you set up R, you will soon become accustomed to the process and it will be a natural part of your workflow.</p>
-<section id="open-rstudio-or-posit-cloud" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="open-rstudio-or-posit-cloud"><span class="header-section-number">3.1</span> Open RStudio or Posit Cloud</h2>
-<p>Remember that R is the engine while RStudio is your dashboard. If you are using Posit Cloud, your engine is already integrated and you only need to navigate to the dashboard on the Posit Cloud website.</p>
-<p>This is analogous to when you head out in a car; you don’t start by tinkering with the engine. Instead, you use the car via its dashboard.</p>
-<p>Similarly, we will interact and use R through RStudio or Posit Cloud.</p>
-</section>
-<section id="create-a-new-r-script" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="create-a-new-r-script"><span class="header-section-number">3.2</span> Create a new R script</h2>
-<p>To start a new R script, use the <em>File</em> menu or the shortcut keys Ctrl + Shift + N (Windows) or Cmd + Shift + N (Mac).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can also use your mouse to point-and-click to open a new file in RStudio (<a href="#fig-newscript" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>) or Posit Cloud (<a href="#fig-newpositscript" class="quarto-xref">Figure&nbsp;<span>3.2</span></a>).</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-newscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/new-R-script.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Open a new R script in RStudio.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-newpositscript" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-newpositscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/posit-new-file.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-newpositscript-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.2: Open a new R script in Posit Cloud.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="prepare-r-script" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="prepare-r-script"><span class="header-section-number">3.3</span> Prepare R script</h2>
-<p>To prepare your R script, use comments to type any relevant information about the script. Examples of relevant information include your name, your course, the semester during which you are enrolled in this course, the assignment name.</p>
-<p>Comments in R are denoted by the hashtag symbol, <code>#</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## This is a comment.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Name: Test Student</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># UNID: u0000000</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Section: 002</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Assignment: LA-3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Once you have included information about your script as comments, you can move on to creating foldable code sections.</p>
-</section>
-<section id="creating-foldable-code-sections" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="creating-foldable-code-sections"><span class="header-section-number">3.4</span> Creating foldable code sections</h2>
-<p>You can also create sections of foldable code in RStudio (<code>Code</code> &gt; <code>Insert Section...</code>). <a href="#fig-fold" class="quarto-xref">Figure&nbsp;<span>3.3</span></a> below shows you how. Once you have created a section, you can collapse it by clicking the arrows next to the line numbers in the script pane.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-fold" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/R-foldable-code.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.3: Creating sections of foldable code.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="install-and-load-packages" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="install-and-load-packages"><span class="header-section-number">3.5</span> Install and load packages</h2>
-<p>Next, you need to install and load the R packages you will be using for this R session. Refer to <a href="01_get-started.html#sec-packages" class="quarto-xref"><span>Section 2.4.5</span></a> for more information about installing vs.&nbsp;loading packages.</p>
-<p>Remember that you only need to install packages once but you need to load packages each time you open R.</p>
+<section id="learning-outcomes" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">9.1</span> Learning Outcomes</h2>
+<p>In this assignment, you will learn how to:</p>
+<ul>
+<li>Read/Load data into R (in LA-3, you learned how to enter data into R manually).</li>
+<li>Use the pipe operator, <code>|&gt;</code>.</li>
+<li>Filter cases from a data frame using the <code>filter()</code> function.</li>
+<li>Summarize variables using the <code>summarise()</code> function.</li>
+</ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -351,80 +250,164 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The functions to install and load packages are <code>install.packages()</code> and <code>library()</code>, respectively.</p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the tidyverse package</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the tidyverse package (after installing)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="sec-saveRscript" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="sec-saveRscript"><span class="header-section-number">3.6</span> Saving your R script</h2>
-<p><strong>Be sure to save your work often.</strong></p>
-<p>You are likely familiar with file types like <code>.docx</code> (Word documents), <code>.pdf</code> (PDF documents), and <code>.txt</code> (text files). If you have not worked with R prior to enrolling in this course, you may not have encountered files with the extension <code>.R</code>.</p>
-<p>Files with a <code>.R</code> extension are known as <strong>R scripts</strong>. As noted in <a href="01_get-started.html#sec-tour" class="quarto-xref"><span>Section 2.4.1</span></a>, a R script is simply a text file containing a set of commands and comments.</p>
-<p>To save your script, click the <img src="images/save.png"> icon in RStudio or use the <strong>File</strong> menu (<a href="#fig-save" class="quarto-xref">Figure&nbsp;<span>3.4</span></a>). Give the file a sensible name and click <strong>Save</strong>. The file will be saved as <code>&lt;filename&gt;.R</code> in your working directory.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-save" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-save-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/saving-R-script.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-save-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.4: Saving your R script in Posit Cloud or RStudio.
-</figcaption>
-</figure>
-</div>
+<p>Read all the instructions carefully before starting the assignment. Set up your R script as you did in LA-3.</p>
 </div>
 </div>
 </section>
-<section id="sec-positexport" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="sec-positexport"><span class="header-section-number">3.7</span> Exporting R file from Posit Cloud</h2>
-<p>To export your R script from Posit Cloud, follow the instructions below (<a href="#fig-export" class="quarto-xref">Figure&nbsp;<span>3.5</span></a>).</p>
+<section id="instructions" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="instructions"><span class="header-section-number">9.2</span> Instructions</h2>
 <ol type="1">
-<li><p>Check the box next to the file you wish to export in the <code>Files</code> pane.</p></li>
-<li><p>In the same pane, click <code>More</code> (top right of the <code>Files</code> pane).</p></li>
-<li><p>Select <code>Export...</code> from the dropdown menu.</p></li>
-<li><p>Be sure to name your file according to the instructions in the assignment, then click <code>Download</code>.</p></li>
+<li>Set up your R script for this assignment (name, uNID, date, assignment number). Install (if necessary) and load the packages below.</li>
 </ol>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-export" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/posit-export-file.gif" class="img-fluid quarto-figure quarto-figure-center figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.5: Exporting your R script from Posit Cloud.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="r-script-checklist-for-lab-assignments" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="r-script-checklist-for-lab-assignments"><span class="header-section-number">3.8</span> R script checklist for lab assignments</h2>
-<p>Be sure you have <em>at least</em> the following components in your R script. This list is <strong>not</strong> comprehensive. It represents the minimal requirements for your R script.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Full name and student ID #</label></li>
-<li><label><input type="checkbox">Assignment name/number (e.g., LA.1)</label></li>
-<li><label><input type="checkbox">Annotations explaining your R code</label></li>
-<li><label><input type="checkbox">R commands to install (if necessary) and load packages</label></li>
-<li><label><input type="checkbox">R commands necessary for completion of your assignment</label></li>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>summarytools</code></li>
+<li><code>rstatix</code></li>
 </ul>
-
-
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Keyboard shortcuts are available under <em>Tools</em> <span class="math inline">\(\rightarrow\)</span> <em>Keyboard Shortcuts Help</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<ol start="2" type="1">
+<li><p>Download the data file called <code>broadway.csv</code> from Canvas and upload it to your project for this assignment on Posit Cloud.</p></li>
+<li><p>Read the data into an object in R using the <code>read_csv()</code> function. For example, you might call your object, which will be a data frame, <code>bway</code> or <code>b</code>. Feel free to be creative with your object name; keep in mind that you will likely have to type the name of the data frame in your code many times.</p></li>
+<li><p>Let’s get a sense of our data using the <code>glimpse()</code> function. This function, which is included in the <code>tidyverse</code> suite of packages for R, allows us to get a glimpse of our data. To use this function, the command is: <code>glimpse(df)</code> where <code>df</code> is the name of your data frame.</p></li>
+<li><p>Using the results of <code>glimpse()</code> in your Console, answer the following questions (as comments in your R script).</p>
+<ol type="a">
+<li>How many cases are there in the broadway dataset?</li>
+<li>How many variables are there in the broadway dataset?</li>
+</ol></li>
+<li><p>Now that we know the dimensions of our data frame (i.e., rows/cases, columns/variables), let’s get a little more familiar with these data. Download the codebook from Canvas (.csv file) and take a look at the names and descriptions of the variables. In your R script, answer the following questions:</p>
+<ol type="a">
+<li>What does the variable, <code>Statistics.Performances</code>, measure?</li>
+<li>What is the name of the variable that describes the maximum amount that a show can earn?</li>
+</ol></li>
+<li><p>In the next step, we will learn to use the pipe operator. The pipe operator, <code>|&gt;</code>, is used to perform sequential functions in R. It is part of the package, <code>magrittr</code> and also included in the <code>tidyverse</code> package. You can also think of the pipe operator, <code>|&gt;</code>, as “then.” If we were to use <code>|&gt;</code> to describe a daily routine, it might look something like this:</p>
+<pre><code> Woke up |&gt;
+ Took a shower |&gt;
+ Got dressed |&gt;
+ Made breakfast |&gt;
+ Ate breakfast |&gt;
+ Went to class</code></pre>
+<p>Now, we will work on an example using the broadway data. We want to figure out the average number of people who attended the show for <em>Mamma Mia!</em> and <em>The Lion King</em>. Answer the question below as comments in your R script (be sure to label this clearly in the script).</p>
+<ol type="a">
+<li>What is the name of the variable that tells us the name of the show?</li>
+<li>What does the variable, <code>Date.Month</code>, measure and what is the format of the data in this variable?</li>
+<li>What is the name of the variable that measures the attendance per show?</li>
 </ol>
+<p>Next, write the steps (in plain language as comments, i.e., pseudocode) to determine the average attendance per show for <em>Mamma Mia!</em> and <em>The Lion King</em>, respectively. An example of pseudocode is shown below.</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| label: ex7</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Start with the broadway data frame, which I called bway</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter for cases that only contain Mamma Mia! from the broadway data using the Show.Name variable</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the mean of the attendance among these cases</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>Translate the pseudocode to R functions using the pipe operator and calculate the mean attendance for *Mamma Mia!*.</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| label: ex7a</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| echo: TRUE</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| eval: false</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| include: TRUE</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| tidy: TRUE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    bway <span class="sc">|&gt;</span> <span class="co"># Start with the broadway data frame</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">filter</span>(Show.Name <span class="sc">==</span> <span class="st">"Mamma Mia!"</span>) <span class="sc">|&gt;</span> <span class="co"># Filter for only Mamma Mia! cases</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="fu">summarise</span>(<span class="at">Mattd =</span> <span class="fu">mean</span>(Statistics.Attendance, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="co"># Find mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+   Mattd
+   &lt;dbl&gt;
+1 10436.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Note that na.rm = TRUE removes NAs (i.e., missing values) from the calculation</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># of the mean, if there are any in your dataset. We don't have those in this</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># dataset, though.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
+<li>Let’s say we also want to know the minimum and maximum number of people who attended a Mamma Mia! show. To do so, add arguments to the <code>summarise()</code> function.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| label: ex7b </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| echo: true </span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| eval: false </span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| include: true </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">#| tidy: true  </span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    bway <span class="sc">|&gt;</span> <span class="co"># Start with the broadway data frame         </span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">filter</span>(Show.Name <span class="sc">==</span> <span class="st">"Mamma Mia!"</span>) <span class="sc">|&gt;</span> <span class="co"># Filter for only Mamma Mia! cases       </span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>            <span class="fu">summarise</span>(<span class="at">M_attd =</span> <span class="fu">mean</span>(Statistics.Attendance, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="co"># Find mean   </span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>                      <span class="at">min_attd =</span> <span class="fu">min</span>(Statistics.Attendance, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="co"># Find minimum </span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>                      <span class="at">max_attd =</span> <span class="fu">max</span>(Statistics.Attendance, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="co"># Find maximum}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  M_attd min_attd max_attd
+   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1 10436.     3307    13742</code></pre>
+</div>
+</div>
+<pre><code>Using the calculations performed by the R commands above, answer the following questions:
+
+a)  What is the minimum number of people who attended Mamma Mia!?
+b)  What is the maximum number of people who attended Mamma Mia!?
+c)  What is the mean number of people who attended Mamma Mia!?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is a function that is part of the package, <code>summarytools</code>, that will enable you to obtain these statistics with a single function. For <strong>2 bonus points</strong>, try to figure out this function and use it in this exercise.</p>
+</div>
+</div>
+<ol start="9" type="1">
+<li><p>Use the same logic and process from the example above to answer the following questions.</p>
+<ol type="a">
+<li>What is the minimum number of people who attended The Lion King?</li>
+<li>What is the maximum number of people who attended The Lion King?</li>
+<li>What is the mean number of people who attended The Lion King?</li>
+<li>Compare the statistics you just calculate for <em>Mamma Mia!</em> and <em>The Lion King</em>. Overall, which show would you say is more successful?</li>
+</ol></li>
+<li><p>Using <code>|&gt;</code> and the functions you just learned, write R code to determine the answers to the questions below. Round your answer to the nearest whole dollar.</p>
+<ol type="a">
+<li>Among shows in the <code>Majestic</code> theater that are <code>Musicals</code>, what is the minimum, maximum, and mean “Gross Gross” in dollars?</li>
+<li>Among shows in the <code>Vivian Beaumont</code> theater that are <code>Musicals</code>, what is the minimum, maximum, and mean “Gross Gross” in dollars?</li>
+<li>Comparing the statistics you just calculated, is the Vivian Beaumont or Majestic theatre more successful?</li>
+</ol></li>
+</ol>
+</section>
+<section id="submission" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="submission"><span class="header-section-number">9.3</span> Submission</h2>
+<p>Submit your R script (named <code>LA-#_FirstName-LastName.R</code>) to Canvas.</p>
+<p>Your R script should:</p>
+<ol type="1">
+<li>Include commands and functions that are necessary to address all the questions in the assignment.</li>
+<li>Contain comments that answer the questions in the assignment.</li>
+<li>Run in its entirety without errors.</li>
+</ol>
+<p>To ensure that your R script runs without errors, you should:</p>
+<ul>
+<li>Save your script.</li>
+<li>Navigate back to Your Workspace on Posit Cloud.</li>
+<li>Reopen your project.</li>
+<li>Run the entire script line-by-line without editing it to ensure there are no errors.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.</p>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -847,14 +830,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01_get-started.html" class="pagination-link" aria-label="Getting Started">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span>
+      <a href="./LA-3-textbook.html" class="pagination-link" aria-label="LA-3: Working with Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">LA-3: Working with Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03_tips.html" class="pagination-link" aria-label="Tips on Working with R">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tips on Working with R</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

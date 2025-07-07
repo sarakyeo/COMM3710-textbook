@@ -310,8 +310,8 @@
     ]
   },
   {
-    "objectID": "LA-1.html",
-    "href": "LA-1.html",
+    "objectID": "LA-1-textbook.html",
+    "href": "LA-1-textbook.html",
     "title": "6  LA-1: Ethics in Research",
     "section": "",
     "text": "6.1 Instructions\nFor this assignment, you will complete online training modules on ethical conduct of human subjects research through the Collaborative Institutional Training Initiative (CITI).\nRead the instructions carefully and in their entirety before starting.\nTo complete CITI training, follow the instructions below:",
@@ -320,8 +320,8 @@
     ]
   },
   {
-    "objectID": "LA-1.html#instructions",
-    "href": "LA-1.html#instructions",
+    "objectID": "LA-1-textbook.html#instructions",
+    "href": "LA-1-textbook.html#instructions",
     "title": "6  LA-1: Ethics in Research",
     "section": "",
     "text": "Open your browser and navigate to https://www.citiprogram.org. Click Register.\nEnter your university affiliation. Click Continue to Step 2.\nFill in your first and last name and your utah.edu email address. Click Continue to Step 3.\nCreate a username and password. Fill in the required fields. When asked to verify your email address, be sure to check your Spam folder for the verification email.\nWhen you are asked Are you interested in the option of receiving Continuing Education Unit credit for completed CITI Program courses? Select No. Remember to answer the required question at the bottom of the page about participation in research surveys.\nUnder Department, type “Communication.” From the drop-down menu of What is your role in research?, select Student researcher – Undergraduate.\nNext, select Group 2: Social/Behavioral Research Investigators and Key Personnel.\nOn the next screen, select I have not previously completed an approved Basic Course.\nOn the Optional Courses screen, select Not at this time.\nClick Finalize registration to complete your registration. If you do not see the Group 2 course on the next screen, click University of Utah Courses to expand the tab. Click on the Group 2 link to start the training.\nComplete all modules with a grade of at least 80%.\nOnce you have completed the modules, click Print Report. Save the resulting report as a PDF file.",
@@ -330,8 +330,8 @@
     ]
   },
   {
-    "objectID": "LA-1.html#submission",
-    "href": "LA-1.html#submission",
+    "objectID": "LA-1-textbook.html#submission",
+    "href": "LA-1-textbook.html#submission",
     "title": "6  LA-1: Ethics in Research",
     "section": "6.2 Submission",
     "text": "6.2 Submission\nSubmit the report as a PDF file on Canvas. An example submission is shown below.",
@@ -340,13 +340,183 @@
     ]
   },
   {
-    "objectID": "LA-1.html#example-citi-report",
-    "href": "LA-1.html#example-citi-report",
+    "objectID": "LA-1-textbook.html#example-citi-report",
+    "href": "LA-1-textbook.html#example-citi-report",
     "title": "6  LA-1: Ethics in Research",
     "section": "6.3 Example CITI Report",
     "text": "6.3 Example CITI Report\n\n\n\n\n\nExample CITI report to be submitted for this assignment.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>LA-1: Ethics in Research</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html",
+    "href": "LA-2-textbook.html",
+    "title": "7  LA-2: Setting Up R",
+    "section": "",
+    "text": "7.1 Learning Outcomes\nIn this assignment, you will learn how to:\nWe will be using Posit Cloud for lab assignments in this course. RStudio, which is the graphical user interface through which many people use R, re-branded themselves as Posit. What used to be called RStudio Cloud is now known as Posit Cloud, but it is the same thing.\nYou can also use R and RStudio as standalone programs offline on your computer, but you will have to download both programs and install them. We will not be covering installation of R on your own machine in this course, but you are welcome to do so on your own (see Chapter 2).",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html#learning-outcomes",
+    "href": "LA-2-textbook.html#learning-outcomes",
+    "title": "7  LA-2: Setting Up R",
+    "section": "",
+    "text": "Setup an account on Posit Cloud.\nSetup Your Workspace on Posit Cloud.\nSetup a Project on Posit Cloud.\nWrite a function in R.\nCreate objects in R.\nCall objects that you have created.\nUse R as a calculator.\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nRemember to save your work often.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html#setting-up-an-account-on-posit-cloud",
+    "href": "LA-2-textbook.html#setting-up-an-account-on-posit-cloud",
+    "title": "7  LA-2: Setting Up R",
+    "section": "7.2 Setting up an account on Posit Cloud",
+    "text": "7.2 Setting up an account on Posit Cloud\n\nOpen a web browser and navigate to Posit.Cloud.\nClick on Log In in the top right corner of the page.\nOn the next screen, click on the Sign Up tab or sign in with your Google or Github account (pick one if you have it and would like to use it for the course). You may sign up with any account that you would like.\nOnce you have created an account, log in.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html#setting-up-posit-cloud",
+    "href": "LA-2-textbook.html#setting-up-posit-cloud",
+    "title": "7  LA-2: Setting Up R",
+    "section": "7.3 Setting up Posit Cloud",
+    "text": "7.3 Setting up Posit Cloud\n\nOnce you log in, you will be taken to Your Workspace.\nClick on New Project in the top right corner. From the drop down options, select New RStudio Project.\nAt the top of the screen, click on Untitled Project to name your project. I recommend having a project for each lab assignment.\nYou’re ready to work with R on Posit Cloud! Your TA will help you get familiar with the layout of R. Be sure you know where the Console and Environment panes are located.\nTake a screenshot of your project and save it. This is one of your submissions for this assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html#your-first-functions",
+    "href": "LA-2-textbook.html#your-first-functions",
+    "title": "7  LA-2: Setting Up R",
+    "section": "7.4 Your First Functions",
+    "text": "7.4 Your First Functions\nAt its core, R is a calculator. It can also make fancy figures. Let’s start by giving R some simple commands.\n\nCreate a new R script, name it LA-2_Your Name.R. Your TA will show you how. Think of a script as a list of commands that you (the user) are giving to the computer (R, which is the engine underlying RStudio and Posit Cloud).\nIn your script, type the following command:\n\n\nprint(\"Your Name Here\")\n\n\nRun the command you just wrote in the script and make note of what happens in the Console. To run commands from the script, highlight the command you want to run and click Run in the top right of the script or use the shortcut keys, Ctrl + Enter (Windows) or Command + Enter.\nCopy and paste the output from the Console into your R script then add # in front of it. \n\n\n\n\n\n\n\nNote\n\n\n\nCongratulations, you have just programmed your first function in R!\n\n\nWith your answer, the script should look something like this:\n\nprint(\"Your Name Here\")\n# [1] \"Your Name Here\"\n\n\nYou can also do basic math with R. In your R script, type the following:\n\n\n5*12\n\n\nCopy and paste the result from the Console in your R script. Again, add # in front of it.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html#creating-objects",
+    "href": "LA-2-textbook.html#creating-objects",
+    "title": "7  LA-2: Setting Up R",
+    "section": "7.5 Creating Objects",
+    "text": "7.5 Creating Objects\nYou might notice that the result of the last calculation you did was not saved anywhere. What if we want to use the result in another calculation or operation? To do this, we can save functions and computations into objects. Let’s create some objects in R so we can use them in subsequent calculations.\n\nType the following in your script and run the function. Describe what happened when you ran the command. You can type your answer under the function in your R script. Type # before your answer so that the text turns green, indicating that these are comments in your script (vs. functions). Comments are not evaluated when you run the script; only functions are evaluated.\n\n\nxray &lt;- 4+5\n\n\nIn your R script, describe (i) what happened in the Console and (ii) what happened in the Environment pane when you ran the function above. Remember to use the # to make all your answers into comments in your R script. \nNow, create another object (you can call it whatever you wish) and assign the number 6 to it. Describe what happened in the Console and the Environment when you created this object. \nUse the object you just created as the denominator and divide xray by this object. Describe what happened in the Console and Environment panes when you did this. \nFinally, let’s create an object called fruitsalad from individual fruit. Create four objects, apples, oranges, pears, and grapes. Assign the following numbers to them: 5, 3, 10, 18, respectively. Create fruitsalad by adding the individual fruit together. Write down the result of your fruit salad in your R script.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-2-textbook.html#submission",
+    "href": "LA-2-textbook.html#submission",
+    "title": "7  LA-2: Setting Up R",
+    "section": "7.6 Submission",
+    "text": "7.6 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>LA-2: Setting Up *R*</span>"
+    ]
+  },
+  {
+    "objectID": "LA-3-textbook.html",
+    "href": "LA-3-textbook.html",
+    "title": "8  LA-3: Working with Data",
+    "section": "",
+    "text": "8.1 Learning Outcomes\nIn this assignment, you will learn how to:",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>LA-3: Working with Data</span>"
+    ]
+  },
+  {
+    "objectID": "LA-3-textbook.html#learning-outcomes",
+    "href": "LA-3-textbook.html#learning-outcomes",
+    "title": "8  LA-3: Working with Data",
+    "section": "",
+    "text": "Create a new R script.\nPrepare your R script for your assignment.\nCreate headers in your R script.\nInstall and load packages in R.\nOpen a help page in R.\nManually enter data into R.\nLook at the contents of a data frame or tibble.\nIdentify variables and their types in a tibble.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>LA-3: Working with Data</span>"
+    ]
+  },
+  {
+    "objectID": "LA-3-textbook.html#setup",
+    "href": "LA-3-textbook.html#setup",
+    "title": "8  LA-3: Working with Data",
+    "section": "8.2 Setup",
+    "text": "8.2 Setup\n\nCreate a new R script and set it up for your assignment. In the first four (4) lines of your script, include the following, each on a new line, as a comment:\n\n\nFull name\nStudent ID (u########)\nDate (MM/DD/YY)\nAssignment name\n\n\n\n\n\n\n\nTip\n\n\n\nComments (text preceded by # in your R script) are not run or executed. R will only run/execute commands or functions (text not preceded by #).\n\n\n\nMake a section of code titled “Installing and loading packages.” Under this heading, write pseudocode in preparation to install and load the following packages:\n\n\ntidyverse\nsummarytools\nrstatix\n\n\n\n\n\n\n\nTip\n\n\n\nPseudocode is the plain English version of your R code that described the steps you are taking in R. It should be written as comments in your R script and should make sense to you. Your pseudocode is a tool that helps you decide which R function or command you need to accomplish a given task.\n\n\n\nInstall the packages above using the function, install.packages(). For example, to install the tidyverse package, the command is install.packages(\"tidyverse\"). Remember that typing the command in your R script does not run or execute the function. You must select the text of the function that you want to run and click “Run” in the top right corner of the script pane (or use the shortcut keys).\nLoad the packages. The function to load the packages is library(). To load the tidyverse package, type library(tidyverse) in your script and run it. Note that for each new project you create in Your Workspace on Posit Cloud, you will have to install and load any necessary packages again.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>LA-3: Working with Data</span>"
+    ]
+  },
+  {
+    "objectID": "LA-3-textbook.html#entering-data-manually",
+    "href": "LA-3-textbook.html#entering-data-manually",
+    "title": "8  LA-3: Working with Data",
+    "section": "8.3 Entering Data Manually",
+    "text": "8.3 Entering Data Manually\nIn the next step, we will enter data into R manually using the c() function, which is short for combine(). Before we do so, let’s learn about the function we will be using.\n\nCreate a new section of code where you can explore and learn about the c() function.\nTo read the documentation for any function, you can add ? in front of the command and run it. This will pull up the documentation (including examples at the very end of the documentation) in the Help tab in the bottom right pane. For example, if I wanted to read the documentation for the library() function, I would run the command: ?library(). Copy and paste the description from the Help pane for the c() function in your R script as a comment.\n\n\n\n\n\n\n\nTip\n\n\n\nThe documentation may not seem helpful at first glance, but once you become more familiar with R and its commands, the Help documentation becomes a useful resource.\n\n\n\nEnter the data in the table below as four (4) objects called Aname, Ateam, PPG (points per game), and REB (rebounds per game). There are two data types in the data table, numeric and character. Your TA will show you how to assign the data to the objects.\n\n\n\n\n2023-24 data of top 5 women's college basketball players by points per game (PPG).\n\n\nAname\nAteam\nPPG\nREB\n\n\n\n\nC. Clark\nIowa\n31.6\n7.4\n\n\nJ. Watkins\nUSC\n27.1\n7.3\n\n\nL. Olsen\nVill\n23.2\n4.8\n\n\nC. Watson\nBuffalo\n23.0\n5.1\n\n\nE. Kitley\nVT\n22.8\n11.4\n\n\n\n\n\n\n\n\nCheck that you have created the objects correctly by calling each object. Calling an object in R allows you to see it in the Console. To call an object, type the name of the object in the Console and press Enter. Or type the name of the object in your R script, then highlight and run it. Copy and paste the results of calling the objects into your R script as comments. You can find the output in the Console pane.\nCombine the objects into a single data frame that has a name of your choosing and look at the data frame. Use the tibble() function to do this. The data in the data frame should match that in Table 1. Call the data frame in the Console. Copy and paste the output as a comment in your R script.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>LA-3: Working with Data</span>"
+    ]
+  },
+  {
+    "objectID": "LA-3-textbook.html#examining-types-of-data",
+    "href": "LA-3-textbook.html#examining-types-of-data",
+    "title": "8  LA-3: Working with Data",
+    "section": "8.4 Examining Types of Data",
+    "text": "8.4 Examining Types of Data\n\nNow, we will examine the type of data stored in each column of our data frame. To do this, we will use the class() function. Let’s start by reading the documentation for the class() function. Copy and paste the description of this function from the Help pane as a comment in your R script.\nDetermine the class of each column in your data frame. For example, if I wanted to check the class of Aname, I would use the function class() with the arguments: df$Aname. The whole command would look like this: class(df$Aname). Copy and paste the class of each column in your R script.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>LA-3: Working with Data</span>"
+    ]
+  },
+  {
+    "objectID": "LA-3-textbook.html#submission",
+    "href": "LA-3-textbook.html#submission",
+    "title": "8  LA-3: Working with Data",
+    "section": "9.1 Submission",
+    "text": "9.1 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>LA-3: Working with Data</span>"
+    ]
+  },
+  {
+    "objectID": "LA-4-textbook.html",
+    "href": "LA-4-textbook.html",
+    "title": "9  LA-4: Data Wrangling",
+    "section": "",
+    "text": "9.1 Learning Outcomes\nIn this assignment, you will learn how to:",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>LA-4: Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-4-textbook.html#learning-outcomes",
+    "href": "LA-4-textbook.html#learning-outcomes",
+    "title": "9  LA-4: Data Wrangling",
+    "section": "",
+    "text": "Read/Load data into R (in LA-3, you learned how to enter data into R manually).\nUse the pipe operator, |&gt;.\nFilter cases from a data frame using the filter() function.\nSummarize variables using the summarise() function.\n\n\n\n\n\n\n\nTip\n\n\n\nRead all the instructions carefully before starting the assignment. Set up your R script as you did in LA-3.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>LA-4: Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-4-textbook.html#instructions",
+    "href": "LA-4-textbook.html#instructions",
+    "title": "9  LA-4: Data Wrangling",
+    "section": "9.2 Instructions",
+    "text": "9.2 Instructions\n\nSet up your R script for this assignment (name, uNID, date, assignment number). Install (if necessary) and load the packages below.\n\n\ntidyverse\nsummarytools\nrstatix\n\n\nDownload the data file called broadway.csv from Canvas and upload it to your project for this assignment on Posit Cloud.\nRead the data into an object in R using the read_csv() function. For example, you might call your object, which will be a data frame, bway or b. Feel free to be creative with your object name; keep in mind that you will likely have to type the name of the data frame in your code many times.\nLet’s get a sense of our data using the glimpse() function. This function, which is included in the tidyverse suite of packages for R, allows us to get a glimpse of our data. To use this function, the command is: glimpse(df) where df is the name of your data frame.\nUsing the results of glimpse() in your Console, answer the following questions (as comments in your R script).\n\nHow many cases are there in the broadway dataset?\nHow many variables are there in the broadway dataset?\n\nNow that we know the dimensions of our data frame (i.e., rows/cases, columns/variables), let’s get a little more familiar with these data. Download the codebook from Canvas (.csv file) and take a look at the names and descriptions of the variables. In your R script, answer the following questions:\n\nWhat does the variable, Statistics.Performances, measure?\nWhat is the name of the variable that describes the maximum amount that a show can earn?\n\nIn the next step, we will learn to use the pipe operator. The pipe operator, |&gt;, is used to perform sequential functions in R. It is part of the package, magrittr and also included in the tidyverse package. You can also think of the pipe operator, |&gt;, as “then.” If we were to use |&gt; to describe a daily routine, it might look something like this:\n Woke up |&gt;\n Took a shower |&gt;\n Got dressed |&gt;\n Made breakfast |&gt;\n Ate breakfast |&gt;\n Went to class\nNow, we will work on an example using the broadway data. We want to figure out the average number of people who attended the show for Mamma Mia! and The Lion King. Answer the question below as comments in your R script (be sure to label this clearly in the script).\n\nWhat is the name of the variable that tells us the name of the show?\nWhat does the variable, Date.Month, measure and what is the format of the data in this variable?\nWhat is the name of the variable that measures the attendance per show?\n\nNext, write the steps (in plain language as comments, i.e., pseudocode) to determine the average attendance per show for Mamma Mia! and The Lion King, respectively. An example of pseudocode is shown below.\n\n\n    #| label: ex7\n\n    # Start with the broadway data frame, which I called bway\n    # Filter for cases that only contain Mamma Mia! from the broadway data using the Show.Name variable\n    # Calculate the mean of the attendance among these cases\n\nTranslate the pseudocode to R functions using the pipe operator and calculate the mean attendance for *Mamma Mia!*.\n\n    #| label: ex7a\n    #| echo: TRUE\n    #| eval: false\n    #| include: TRUE\n    #| tidy: TRUE\n\n    bway |&gt; # Start with the broadway data frame\n            filter(Show.Name == \"Mamma Mia!\") |&gt; # Filter for only Mamma Mia! cases\n            summarise(Mattd = mean(Statistics.Attendance, na.rm = TRUE)) # Find mean\n\n# A tibble: 1 × 1\n   Mattd\n   &lt;dbl&gt;\n1 10436.\n\n    # Note that na.rm = TRUE removes NAs (i.e., missing values) from the calculation\n    # of the mean, if there are any in your dataset. We don't have those in this\n    # dataset, though.\n\n\nLet’s say we also want to know the minimum and maximum number of people who attended a Mamma Mia! show. To do so, add arguments to the summarise() function.\n\n\n    #| label: ex7b \n    #| echo: true \n    #| eval: false \n    #| include: true \n    #| tidy: true  \n\n    bway |&gt; # Start with the broadway data frame         \n            filter(Show.Name == \"Mamma Mia!\") |&gt; # Filter for only Mamma Mia! cases       \n            summarise(M_attd = mean(Statistics.Attendance, na.rm = TRUE), # Find mean   \n                      min_attd = min(Statistics.Attendance, na.rm = TRUE), # Find minimum \n                      max_attd = max(Statistics.Attendance, na.rm = TRUE)) # Find maximum}\n\n# A tibble: 1 × 3\n  M_attd min_attd max_attd\n   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 10436.     3307    13742\n\n\nUsing the calculations performed by the R commands above, answer the following questions:\n\na)  What is the minimum number of people who attended Mamma Mia!?\nb)  What is the maximum number of people who attended Mamma Mia!?\nc)  What is the mean number of people who attended Mamma Mia!?\n\n\n\n\n\n\nNote\n\n\n\nThere is a function that is part of the package, summarytools, that will enable you to obtain these statistics with a single function. For 2 bonus points, try to figure out this function and use it in this exercise.\n\n\n\nUse the same logic and process from the example above to answer the following questions.\n\nWhat is the minimum number of people who attended The Lion King?\nWhat is the maximum number of people who attended The Lion King?\nWhat is the mean number of people who attended The Lion King?\nCompare the statistics you just calculate for Mamma Mia! and The Lion King. Overall, which show would you say is more successful?\n\nUsing |&gt; and the functions you just learned, write R code to determine the answers to the questions below. Round your answer to the nearest whole dollar.\n\nAmong shows in the Majestic theater that are Musicals, what is the minimum, maximum, and mean “Gross Gross” in dollars?\nAmong shows in the Vivian Beaumont theater that are Musicals, what is the minimum, maximum, and mean “Gross Gross” in dollars?\nComparing the statistics you just calculated, is the Vivian Beaumont or Majestic theatre more successful?",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>LA-4: Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-4-textbook.html#submission",
+    "href": "LA-4-textbook.html#submission",
+    "title": "9  LA-4: Data Wrangling",
+    "section": "9.3 Submission",
+    "text": "9.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>LA-4: Data Wrangling</span>"
     ]
   }
 ]
