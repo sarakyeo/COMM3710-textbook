@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; LA-1: Ethics in Research – COMM 3710: Getting Started with R</title>
+<title>12&nbsp; LA-7: Examining Relationships – COMM 3710: Getting Started with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./LA-2-textbook.html" rel="next">
-<link href="./04_ggplot2.html" rel="prev">
+<link href="./LA-8-textbook.html" rel="next">
+<link href="./LA-6-textbook.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,6 +103,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LA-1-textbook.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">LA-1: Ethics in Research</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./LA-7-textbook.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LA-7: Examining Relationships</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -138,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LA-1-textbook.html" class="sidebar-item-text sidebar-link active">
+  <a href="./LA-1-textbook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">LA-1: Ethics in Research</span></span></a>
   </div>
 </li>
@@ -174,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LA-7-textbook.html" class="sidebar-item-text sidebar-link">
+  <a href="./LA-7-textbook.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LA-7: Examining Relationships</span></span></a>
   </div>
 </li>
@@ -200,9 +263,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions"><span class="header-section-number">6.1</span> Instructions</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">6.2</span> Submission</a></li>
-  <li><a href="#example-citi-report" id="toc-example-citi-report" class="nav-link" data-scroll-target="#example-citi-report"><span class="header-section-number">6.3</span> Example CITI Report</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes"><span class="header-section-number">12.1</span> Learning Outcomes</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions"><span class="header-section-number">12.2</span> Instructions</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">12.3</span> Submission</a></li>
+  <li><a href="#selecting-a-statistical-test" id="toc-selecting-a-statistical-test" class="nav-link" data-scroll-target="#selecting-a-statistical-test"><span class="header-section-number">12.4</span> Selecting a Statistical Test</a></li>
+  <li><a href="#conducting-a-statistical-test-in-r" id="toc-conducting-a-statistical-test-in-r" class="nav-link" data-scroll-target="#conducting-a-statistical-test-in-r"><span class="header-section-number">12.5</span> Conducting a Statistical Test in R</a>
+  <ul class="collapse">
+  <li><a href="#chi-squared-test" id="toc-chi-squared-test" class="nav-link" data-scroll-target="#chi-squared-test"><span class="header-section-number">12.5.1</span> Chi-squared test</a></li>
+  <li><a href="#t-test" id="toc-t-test" class="nav-link" data-scroll-target="#t-test"><span class="header-section-number">12.5.2</span> <em>t</em>-test</a></li>
+  <li><a href="#analysis-of-variance-anova" id="toc-analysis-of-variance-anova" class="nav-link" data-scroll-target="#analysis-of-variance-anova"><span class="header-section-number">12.5.3</span> Analysis of variance (ANOVA)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -211,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">LA-1: Ethics in Research</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LA-7: Examining Relationships</span></h1>
 </div>
 
 
@@ -228,101 +298,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="instructions" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="instructions"><span class="header-section-number">6.1</span> Instructions</h2>
-<p>For this assignment, you will complete online training modules on ethical conduct of human subjects research through the Collaborative Institutional Training Initiative (CITI).</p>
-<p><strong>Read the instructions carefully and in their entirety before starting.</strong></p>
-<p>To complete CITI training, follow the instructions below:</p>
+<section id="learning-outcomes" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">12.1</span> Learning Outcomes</h2>
+<p>In this assignment, you will:</p>
+<ul>
+<li>Select the appropriate statistical test.</li>
+<li>Conduct a statistical test.</li>
+<li>Interpret the results of a statistical test.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Read all the instructions carefully before starting the assignment.</p>
+</div>
+</div>
+</section>
+<section id="instructions" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="instructions"><span class="header-section-number">12.2</span> Instructions</h2>
 <ol type="1">
-<li><p>Open your browser and navigate to <a href="https://www.citiprogram.org/">https://www.citiprogram.org</a>. Click <code>Register</code>.</p></li>
-<li><p>Enter your university affiliation. Click <code>Continue to Step 2</code>.</p></li>
-<li><p>Fill in your <strong>first and last name</strong> and your <strong>utah.edu email address</strong>. Click <code>Continue to Step 3</code>.</p></li>
-<li><p>Create a username and password. Fill in the required fields. When asked to verify your email address, be sure to check your Spam folder for the verification email.</p></li>
-<li><p>When you are asked <code>Are you interested in the option of receiving Continuing Education Unit credit for completed CITI Program courses?</code> Select <code>No</code>. Remember to answer the required question at the bottom of the page about participation in research surveys.</p></li>
-<li><p>Under <code>Department</code>, type “Communication.” From the drop-down menu of <code>What is your role in research?</code>, select <code>Student researcher – Undergraduate</code>.</p></li>
-<li><p>Next, select <code>Group 2: Social/Behavioral Research Investigators and Key Personnel</code>.</p></li>
-<li><p>On the next screen, select <code>I have not previously completed an approved Basic Course</code>.</p></li>
-<li><p>On the <code>Optional Courses</code> screen, select <code>Not at this time</code>.</p></li>
-<li><p>Click <code>Finalize registration</code> to complete your registration. If you do not see the Group 2 course on the next screen, click <code>University of Utah Courses</code> to expand the tab. Click on the Group 2 link to start the training.</p></li>
-<li><p><strong>Complete all modules with a grade of at least 80%</strong>.</p></li>
-<li><p>Once you have completed the modules, click <code>Print Report</code>. <strong>Save the resulting report as a PDF file</strong>.</p></li>
+<li><p>Load the packages below and download the <code>covid.csv</code> data file from Canvas. Read the dataset into R. Use the codebook on Canvas to familiarize yourself with the data in this file.</p>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>summarytools</code></li>
+<li><code>rstatix</code></li>
+</ul></li>
+<li><p>Create a new variable called <code>region</code>. Have the variable equal <code>Americas</code> if the country is Brazil, Canada, Mexico, or the United States. Have the variable equal <code>Asia</code> if the country is China, India, Japan, Singapore, or South Korea. Have the variable equal <code>Europe</code> is the country is Denmark, France, Germany, Italy, or Spain. Run a frequency distribution of region. Which region has the highest frequency?</p></li>
+<li><p>Let’s say we want to conduct a statistical test to determine whether the total number of contacts people had on the previous day differs by region. First, answer the questions below. Be sure to include your answers as comments in your R file.</p>
+<ol type="a">
+<li>Which variables are involved in this statistical test? Which is the independent variable? Which is the dependent variable?</li>
+<li>Run a frequency distribution of <code>total_contacts</code>. Is this variable categorical or continuous?</li>
+<li>Is the variable <code>region</code> continuous or categorical?</li>
+<li>Given your answers to the previous questions, what statistical test should you use? Why? Refer to the flowchart (<a href="#fig-select-test" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>) to help select a statistical test.</li>
+</ol></li>
+<li><p>Conduct the statistical test from your answer to 3d. Answer the following questions.</p>
+<ol type="a">
+<li>What is the test statistic and the probability value (i.e., <em>p</em>-value) associated with that test statistic?</li>
+<li>Based on the test statistic and the <em>p</em>-value, do the number of total contacts differ by region?</li>
+</ol></li>
+<li><p>Next, let’s compare how mask-wearing differs between the first and second year after the COVID outbreak. Follow the steps below to select and conduct the appropriate statistical test.</p>
+<ol type="a">
+<li>State your hypothesis. Do you think more people wore masks when they went outside in the first or second year after the outbreak? Why?</li>
+<li>Identify the dependent variable. Is it continuous or categorical?</li>
+<li>What variable can you use to create the independent variable? Describe how you might recode an existing variable to create the independent variable. Then, create this new variable using the <code>mutate()</code> and <code>case_when()</code> functions. Is this new variable continuous or categorical?</li>
+<li>Select (<a href="#fig-select-test" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>) and conduct the appropriate statistical test.</li>
+<li>Report the test statistic and probability value as a comment in your R script.</li>
+<li>Calculate the means and standard deviations of the dependent variable for the first and second years after the COVID outbreak. Include these descriptive statistics in your R script. Did people wear masks more often when they went outside in the first or second year after the outbreak?</li>
+<li>Does the statistical test support your hypothesis?</li>
+</ol></li>
 </ol>
 </section>
-<section id="submission" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="submission"><span class="header-section-number">6.2</span> Submission</h2>
-<p>Submit the report as a <strong>PDF file</strong> on Canvas. An example submission is shown below.</p>
+<section id="submission" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="submission"><span class="header-section-number">12.3</span> Submission</h2>
+<p>Submit your R script (named <code>LA-#_FirstName-LastName.R</code>) to Canvas.</p>
+<p>Your R script should:</p>
+<ol type="1">
+<li>Include commands and functions that are necessary to address all the questions in the assignment.</li>
+<li>Contain comments that answer the questions in the assignment.</li>
+<li>Run in its entirety without errors.</li>
+</ol>
+<p>To ensure that your R script runs without errors, you should:</p>
+<ul>
+<li>Save your script.</li>
+<li>Navigate back to Your Workspace on Posit Cloud.</li>
+<li>Reopen your project.</li>
+<li>Run the entire script line-by-line without editing it to ensure there are no errors.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.</p>
+</div>
+</div>
 </section>
-<section id="example-citi-report" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="example-citi-report"><span class="header-section-number">6.3</span> Example CITI Report</h2>
+<section id="selecting-a-statistical-test" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="selecting-a-statistical-test"><span class="header-section-number">12.4</span> Selecting a Statistical Test</h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/LA-1_CITIex.png" class="img-fluid figure-img"></p>
-<figcaption>Example CITI report to be submitted for this assignment.</figcaption>
+<div id="fig-select-test" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-select-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/selecting-stats-test.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-select-test-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: Selecting a statistical test.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<!--Lab Lesson Plan
-
-# 1) Take attendance
-
-# 2) Discuss course details
-
-## Lecture
-Quizzes
-- Reminder: Quizzes open on Tuesdays and close on Sundays. You have 20 min to complete quizzes.
-- Do not wait until the weekend to complete the quiz. For example, if they have technical issues, neither we nor CTLE can help them on Friday evenings or Saturdays.
-
-
-## Lab
-Assignments
-- There will be 9 lab assignments.
-- You will have two weeks to complete each assignment.
-
-Presentations
-- These are group presentations--you have been assigned to teams on Canvas.
-- Each team is responsible for walking your peers through the skills necessary for each lab assignment (starting from LA-3 through LA-9).
-- We will sign up for these today.
-
-# 3) Lab presentation sign-up
-Team activities for today:
-- Find your group.
-- Introduce yourselves.
-- Decide how you will communicate with your group.
-- Decide on a week to present (first come, first serve).
-- Open the floor to questions from students.
-
-# 4) Discuss research ethics
-- Discussion, no slides.
-- Most egregious breaches of research ethics have been turned in to movies.
-    - *The Stanford Prison Experiment* (2015)
-    - *The Immortal Life of Henrietta Lacks* (2017)
-    - *Experimenter* (2015)
-- Belmont report-sets out the standards for ethical research.
-    1) **Respect for persons**
-        - Has to do with autonomous choice, informed consent.
-        - Participants must be aware of what is being asked of them.
-    2) **Beneficience**
-        - Maximize benefits and minimize risks
-        - Better society
-    3) **Justice**
-        - Risks and benefits fairly distributed.
-        - Cannot coerce into participating.
-        - e.g., prisoners, children
-
-# 5) Introduce LA-1
-- Introduce LA-1.
-- Materials are on Canvas.
-- Please ask questions.
-- Remember all assignments are to be completed individually.
-- Students who have completed CITI training in a previous semester or different course should take the Refresher Course.
-- Let students work on LA-1 for the remainder of class.
-
--->
+</section>
+<section id="conducting-a-statistical-test-in-r" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="conducting-a-statistical-test-in-r"><span class="header-section-number">12.5</span> Conducting a Statistical Test in R</h2>
+<section id="chi-squared-test" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="chi-squared-test"><span class="header-section-number">12.5.1</span> Chi-squared test</h3>
+<p>A chi-squared test is used when we want to compare two categorical variables. To do so in R, you can use the following command (<code>df</code>, <code>dep_var</code>, and <code>ind_var</code> have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq_test</span>(<span class="at">x =</span> df<span class="sc">$</span>ind_var, <span class="at">y =</span> df<span class="sc">$</span>dep_var)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1 × 6</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#       n statistic         p    df method          p.signif</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># * &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;           &lt;chr&gt;   </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1   291      22.5 0.0000133     2 Chi-square test **** </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To report the results of your chi-squared test in APA format, you would use the following format, replacing the text in bold font with the results from your Console:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(\chi^2\)</span>(<strong><code>df</code></strong>, <span class="math inline">\(N\)</span> = <strong><code>n</code></strong>) = <strong><code>statistic</code></strong>, <em>p</em> = <strong><code>p</code></strong></p>
+</blockquote>
+<p>From the results of the above chi-squared test, I would report results like this: <span class="math inline">\(\chi^2(df = 2, N = 291) = 22.5\)</span>, <span class="math inline">\(p &lt; .001\)</span>. If the <em>p</em>-value is less than .001, you do not need to report the exact value. If it is greater than .001, then report the exact value rounded to two or three decimal places.</p>
+</section>
+<section id="t-test" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="t-test"><span class="header-section-number">12.5.2</span> <em>t</em>-test</h3>
+<p>A <em>t</em>-test is used to compare the mean values of a continuous variable between two groups. To do so in R, you can use the following command (<code>df</code>, <code>dep_var</code>, and <code>ind_var</code> have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">t_test</span>(dep_var <span class="sc">~</span> ind_var)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 1 × 10</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   .y.        group1 group2    n1    n2 statistic    df        p    p.adj p.adj.signif</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># * &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;       </span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 dep_var ind_var1  ind_var2  54    70     -12.2  122. 6.49e-23 6.49e-23 ****   </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To report the results of your chi-squared test in APA format, you would use the following format, replacing the text in bold font with the results from your Console:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(t\)</span>(<strong><code>df</code></strong>) = <strong><code>statistic</code></strong>, <em>p</em> = <strong><code>p</code></strong></p>
+</blockquote>
+<p>Using the results above, I would report the results of a <em>t</em>-test like this: <span class="math inline">\(t(df = 122) = -12.2\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
+</section>
+<section id="analysis-of-variance-anova" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="analysis-of-variance-anova"><span class="header-section-number">12.5.3</span> Analysis of variance (ANOVA)</h3>
+<p>ANOVA is used when we want to compare the mean values of continuous variable between more than two groups. To do so in R, you can use the following command (<code>df</code>, <code>dep_var</code>, and <code>ind_var</code> have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">anova_test</span>(dep_var <span class="sc">~</span> ind_var)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ANOVA Table (type II tests)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   Effect  DFn DFd     F        p p&lt;.05   ges</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 ind_var   2 157 7.505 0.000771     * 0.087</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To report the results in APA format:</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(F\)</span> (<code>DFn</code>, <code>DFd</code>) = <code>F-value</code>, <span class="math inline">\(p =\)</span> <code>p-value</code></p>
+</blockquote>
+<p>Using the results above, I would report: <span class="math inline">\(F(2, 157) = 7.51\)</span>, <span class="math inline">\(p &lt; .001\)</span>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -745,13 +880,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./04_ggplot2.html" class="pagination-link" aria-label="Graphing with `ggplot2`">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Graphing with <code>ggplot2</code></span></span>
+      <a href="./LA-6-textbook.html" class="pagination-link" aria-label="LA-6: Data Visualization">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">LA-6: Data Visualization</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./LA-2-textbook.html" class="pagination-link" aria-label="LA-2: Setting Up *R*">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">LA-2: Setting Up <em>R</em></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./LA-8-textbook.html" class="pagination-link" aria-label="LA-8: Practice Data Analysis">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">LA-8: Practice Data Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

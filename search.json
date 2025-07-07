@@ -518,5 +518,225 @@
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>LA-4: Data Wrangling</span>"
     ]
+  },
+  {
+    "objectID": "LA-5-textbook.html",
+    "href": "LA-5-textbook.html",
+    "title": "10  LA-5: More Data Wrangling",
+    "section": "",
+    "text": "10.1 Learning Outcomes\nIn this assignment, you will learn how to:",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>LA-5: More Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-5-textbook.html#learning-outcomes",
+    "href": "LA-5-textbook.html#learning-outcomes",
+    "title": "10  LA-5: More Data Wrangling",
+    "section": "",
+    "text": "Run and examine frequency distributions using the freq() function in the summarytools package.\nView descriptive statistics using the descr() function in the summarytools package.\nRecoding variables using the case_when() function.\nCreate new variables from existing variables in a data frame using the mutate() function.\n\n\n\n\n\n\n\nTip\n\n\n\nRead all the instructions carefully before starting the assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>LA-5: More Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-5-textbook.html#instructions",
+    "href": "LA-5-textbook.html#instructions",
+    "title": "10  LA-5: More Data Wrangling",
+    "section": "10.2 Instructions",
+    "text": "10.2 Instructions\n\nInstall (install.packages()) and load (library()) the packages below. Then download wind-turbines.csv dataset from Canvas and read it in to R. You will also want to download the codebook for the data from Canvas.\n\ntidyverse\nsummarytools\nrstatix\n\nThe dataset includes data about wind turbines in the US. Use the freq() function to examine the frequency distributions of the variables Site.State and Year. Use the frequency distributions to answer the following questions.\n\nHow many wind turbines are located in Utah?\nHow many wind turbines became operational in 2021?\nWhat percentage of turbines became operational between 1983 and 1999 (include these years in the calculation)?\n\nNow, subset the data to answer the following question: How many turbines in Utah have been operational since 2010?\nExamine the frequency distribution of Turbine.Capacity based on the subset in #3.\n\nHow many turbines in this subset have a capacity of 2,300 kW?\nWhat percentage of turbines in this subset have a capacity of 1,500 kW?\n\nOften, we want to look at descriptive statistics of a quantitative variable. We can do this using the descr() function that is in the package summarytools. Examine the descriptive statistics for Turbine.Total_Height and answer the questions below. Include the units of measurement in your answers.\n\nWhat is the mean?\nWhat is the median?\nWhat is the maximum?\n\nNext, we will learn how to use the function, mutate(). We use this function to create new variables (or “mutate” them) from existing ones. Let’s create a new variable called Turbine_Space that is the mean of two existing variables, Turbine.Hub_Height and Turbine.Rotor_Diameter. Then, examine the descriptive statistics of the new variable, Turbine_Space, and answer the following questions:\n\nWhat is the mean of Turbine_Space?\nWhat is the minimum value of Turbine_Space?\nWhat is the maximum value of Turbine_Space?\n\nSometimes, we may want to make continuous variables into categorical variables. For example, let’s say we are interested in the number of turbines in a project, Project.Number_Turbines, but we want to categorize them into low vs. high numbers of turbines in projects.\n\nWe refer to this process as recoding variables. For this exercise, let’s recode projects with 100 turbines or less into the low category and those that have more than 100 turbines into the high category.\n\nUse the mutate() and case_when() functions to recode Project.Number_Turbines into a new variable, Project.Number, with only two categories, low (\\(\\le\\) 100) and high (\\(&gt;\\) 100). Then, answer the following questions.\n\nHow many projects are in the low category?\nHow many projects are in the high category?\n\nBONUS: In the previous step, you created a new variable called Project.Number. What is the mean Project.Capacity among projects in the (a) low and (b) high Project.Number categories?",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>LA-5: More Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-5-textbook.html#submission",
+    "href": "LA-5-textbook.html#submission",
+    "title": "10  LA-5: More Data Wrangling",
+    "section": "10.3 Submission",
+    "text": "10.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>LA-5: More Data Wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "LA-6-textbook.html",
+    "href": "LA-6-textbook.html",
+    "title": "11  LA-6: Data Visualization",
+    "section": "",
+    "text": "11.1 Learning Outcomes\nIn this assignment, you will:",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>LA-6: Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "LA-6-textbook.html#learning-outcomes",
+    "href": "LA-6-textbook.html#learning-outcomes",
+    "title": "11  LA-6: Data Visualization",
+    "section": "",
+    "text": "Learn how to use ggplot2, which is a package included in the tidyverse suite of packages, to create visualizations using data.\nPractice using functions from LA-5, including mutate(), freq(), and descr().\n\n\n\n\n\n\n\nTip\n\n\n\nRead all the instructions carefully before starting the assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>LA-6: Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "LA-6-textbook.html#instructions",
+    "href": "LA-6-textbook.html#instructions",
+    "title": "11  LA-6: Data Visualization",
+    "section": "11.2 Instructions",
+    "text": "11.2 Instructions\n\nLoad the packages below and download the Utilities.csv data file from Canvas. Read the dataset into R. Use the codebook on Canvas to familiarize yourself with the data in this file.\n\ntidyverse\nsummarytools\n\nRead and follow along with Chapter 5. Use the data provided in Chapter 5 and follow along with this chapter.\n\n\n\n\n\n\n\nTip\n\n\n\nDo not skip this step (Step 2). It will help you understand ggplot2.\n\n\n\nMake a histogram to display the distribution of customers’ total monthly bill.\n\nUse the histogram you created and describe the distribution. Is the distribution skewed or symmetric? If skewed, is the distribution skewed positively or negatively?\nAt what cost do most of the total monthly bills fall? Provide a range between which the total monthly bills fall.\n\nMake a scatterplot to display gas bill by month. Use your graph to answer the following questions.\n\nWhich month do you think has the highest average gas bill?\nUse R to calculate the average gas bill for the months of January and December. Which is higher?\n\nMake a scatterplot to display electric bill by month. Use your graph to answer the following questions.\n\nWhich month do you think has the highest average electric bill?\nCalculate the average electric bill for the months of September and December. Which is higher?\n\nMake a scatter plot to display the relationship between gas usage and gas bill. Place gas usage on the x-axis and monthly gas bill on the y-axis. Does there appear to be a relationship between gas usage and gas bill? If so, describe the relationship (e.g., does a relationship exist? Is it linear? Is there a positive or negative relationship between the variables?).\nMake a scatterplot to show the relationship between electricity usage and electric bill. Does there appear to be a relationship between electricity usage and electric bill? If so, describe the relationship.\nCreate a new categorical variable called season. Have the variable equal winter if the bill was from December, January, or February. Have the variable equal spring if the bill was from March, April, or May. Have the variable equal summer if the bill was from June, July, or August. Have the variable equal fall if the bill was from September, October, or November.\n\nThen, examine a frequency table of season.\n\nHow many bills in the data set are from fall?\nHow many bills in the data set are from summer?\n\nBONUS (2 points): Make a bar chart using the geom_col() to display the count or proportion of donors by season.\n\nFirst, make a new variable, DonorStatus. Set DonorStatus equal to 1 if the billee donated money to Operation Fuel and 0 otherwise. Check that you have created the DonorStatus variable correctly.\n\nThen, use ggplot() to create your graph. In your own words, describe the graph. Does donation vary by season?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>LA-6: Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "LA-6-textbook.html#submission",
+    "href": "LA-6-textbook.html#submission",
+    "title": "11  LA-6: Data Visualization",
+    "section": "11.3 Submission",
+    "text": "11.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>LA-6: Data Visualization</span>"
+    ]
+  },
+  {
+    "objectID": "LA-7-textbook.html",
+    "href": "LA-7-textbook.html",
+    "title": "12  LA-7: Examining Relationships",
+    "section": "",
+    "text": "12.1 Learning Outcomes\nIn this assignment, you will:",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>LA-7: Examining Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "LA-7-textbook.html#learning-outcomes",
+    "href": "LA-7-textbook.html#learning-outcomes",
+    "title": "12  LA-7: Examining Relationships",
+    "section": "",
+    "text": "Select the appropriate statistical test.\nConduct a statistical test.\nInterpret the results of a statistical test.\n\n\n\n\n\n\n\nTip\n\n\n\nRead all the instructions carefully before starting the assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>LA-7: Examining Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "LA-7-textbook.html#instructions",
+    "href": "LA-7-textbook.html#instructions",
+    "title": "12  LA-7: Examining Relationships",
+    "section": "12.2 Instructions",
+    "text": "12.2 Instructions\n\nLoad the packages below and download the covid.csv data file from Canvas. Read the dataset into R. Use the codebook on Canvas to familiarize yourself with the data in this file.\n\ntidyverse\nsummarytools\nrstatix\n\nCreate a new variable called region. Have the variable equal Americas if the country is Brazil, Canada, Mexico, or the United States. Have the variable equal Asia if the country is China, India, Japan, Singapore, or South Korea. Have the variable equal Europe is the country is Denmark, France, Germany, Italy, or Spain. Run a frequency distribution of region. Which region has the highest frequency?\nLet’s say we want to conduct a statistical test to determine whether the total number of contacts people had on the previous day differs by region. First, answer the questions below. Be sure to include your answers as comments in your R file.\n\nWhich variables are involved in this statistical test? Which is the independent variable? Which is the dependent variable?\nRun a frequency distribution of total_contacts. Is this variable categorical or continuous?\nIs the variable region continuous or categorical?\nGiven your answers to the previous questions, what statistical test should you use? Why? Refer to the flowchart (Figure 12.1) to help select a statistical test.\n\nConduct the statistical test from your answer to 3d. Answer the following questions.\n\nWhat is the test statistic and the probability value (i.e., p-value) associated with that test statistic?\nBased on the test statistic and the p-value, do the number of total contacts differ by region?\n\nNext, let’s compare how mask-wearing differs between the first and second year after the COVID outbreak. Follow the steps below to select and conduct the appropriate statistical test.\n\nState your hypothesis. Do you think more people wore masks when they went outside in the first or second year after the outbreak? Why?\nIdentify the dependent variable. Is it continuous or categorical?\nWhat variable can you use to create the independent variable? Describe how you might recode an existing variable to create the independent variable. Then, create this new variable using the mutate() and case_when() functions. Is this new variable continuous or categorical?\nSelect (Figure 12.1) and conduct the appropriate statistical test.\nReport the test statistic and probability value as a comment in your R script.\nCalculate the means and standard deviations of the dependent variable for the first and second years after the COVID outbreak. Include these descriptive statistics in your R script. Did people wear masks more often when they went outside in the first or second year after the outbreak?\nDoes the statistical test support your hypothesis?",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>LA-7: Examining Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "LA-7-textbook.html#submission",
+    "href": "LA-7-textbook.html#submission",
+    "title": "12  LA-7: Examining Relationships",
+    "section": "12.3 Submission",
+    "text": "12.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>LA-7: Examining Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "LA-7-textbook.html#selecting-a-statistical-test",
+    "href": "LA-7-textbook.html#selecting-a-statistical-test",
+    "title": "12  LA-7: Examining Relationships",
+    "section": "12.4 Selecting a Statistical Test",
+    "text": "12.4 Selecting a Statistical Test\n\n\n\n\n\n\n\n\nFigure 12.1: Selecting a statistical test.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>LA-7: Examining Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "LA-7-textbook.html#conducting-a-statistical-test-in-r",
+    "href": "LA-7-textbook.html#conducting-a-statistical-test-in-r",
+    "title": "12  LA-7: Examining Relationships",
+    "section": "12.5 Conducting a Statistical Test in R",
+    "text": "12.5 Conducting a Statistical Test in R\n\n12.5.1 Chi-squared test\nA chi-squared test is used when we want to compare two categorical variables. To do so in R, you can use the following command (df, dep_var, and ind_var have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.\n\nchisq_test(x = df$ind_var, y = df$dep_var)\n\n# A tibble: 1 × 6\n#       n statistic         p    df method          p.signif\n# * &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;           &lt;chr&gt;   \n# 1   291      22.5 0.0000133     2 Chi-square test **** \n\nTo report the results of your chi-squared test in APA format, you would use the following format, replacing the text in bold font with the results from your Console:\n\n\\(\\chi^2\\)(df, \\(N\\) = n) = statistic, p = p\n\nFrom the results of the above chi-squared test, I would report results like this: \\(\\chi^2(df = 2, N = 291) = 22.5\\), \\(p &lt; .001\\). If the p-value is less than .001, you do not need to report the exact value. If it is greater than .001, then report the exact value rounded to two or three decimal places.\n\n\n12.5.2 t-test\nA t-test is used to compare the mean values of a continuous variable between two groups. To do so in R, you can use the following command (df, dep_var, and ind_var have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.\n\ndf |&gt; \n        t_test(dep_var ~ ind_var)\n\n# A tibble: 1 × 10\n#   .y.        group1 group2    n1    n2 statistic    df        p    p.adj p.adj.signif\n# * &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;       \n# 1 dep_var ind_var1  ind_var2  54    70     -12.2  122. 6.49e-23 6.49e-23 ****   \n\nTo report the results of your chi-squared test in APA format, you would use the following format, replacing the text in bold font with the results from your Console:\n\n\\(t\\)(df) = statistic, p = p\n\nUsing the results above, I would report the results of a t-test like this: \\(t(df = 122) = -12.2\\), \\(p &lt; .001\\).\n\n\n12.5.3 Analysis of variance (ANOVA)\nANOVA is used when we want to compare the mean values of continuous variable between more than two groups. To do so in R, you can use the following command (df, dep_var, and ind_var have to be replaced with the names of your dataframe, dependent variable, and independent variable, respectively). The output that results from running this command in R is shown below as comments.\n\ndf |&gt; \n        anova_test(dep_var ~ ind_var)\n\n# ANOVA Table (type II tests)\n#\n#   Effect  DFn DFd     F        p p&lt;.05   ges\n# 1 ind_var   2 157 7.505 0.000771     * 0.087\n\nTo report the results in APA format:\n\n\\(F\\) (DFn, DFd) = F-value, \\(p =\\) p-value\n\nUsing the results above, I would report: \\(F(2, 157) = 7.51\\), \\(p &lt; .001\\).",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>LA-7: Examining Relationships</span>"
+    ]
+  },
+  {
+    "objectID": "LA-8-textbook.html",
+    "href": "LA-8-textbook.html",
+    "title": "13  LA-8: Practice Data Analysis",
+    "section": "",
+    "text": "13.1 Learning Outcomes\nIn this assignment, you will practice the data analysis skills that you have learned this semester.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>LA-8: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-8-textbook.html#learning-outcomes",
+    "href": "LA-8-textbook.html#learning-outcomes",
+    "title": "13  LA-8: Practice Data Analysis",
+    "section": "",
+    "text": "Tip\n\n\n\nRead all the instructions carefully before starting the assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>LA-8: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-8-textbook.html#instructions",
+    "href": "LA-8-textbook.html#instructions",
+    "title": "13  LA-8: Practice Data Analysis",
+    "section": "13.2 Instructions",
+    "text": "13.2 Instructions\n\nDownload the full COVID dataset (covid-full.csv) and codebook (covid-full-codebook.csv). Use the codebook to familiarize yourself with the variables in the data and read the data into R. Install the packages that we have been using this semester.\nCreate a new variable called asia_europe. Have the variable equal Asia if the country is China, India, Japan, Singapore, or South Korea. Have the variable equal Europe is the country is Denmark, France, Germany, Italy, or Spain.\n\nObtain descriptive statistics for the number of time respondents washed their hands on the previous day for Asia and Europe.\n\nWhat is the mean and standard deviation of handwashes in Asia?\nWhat is the mean and standard deviation of handwashes in Europe?\n\n\nConduct a statistical test to determine whether there is a significant difference in the number of times people living in Asia compared to Europe washed their hands.\n\nState your hypothesis.\nSelect and conduct a statistical test to address your hypothesis.\nReport the test statistic and p-value.\nDoes the statistical test support or refute your hypothesis?\n\n\n\n\n\n\n\n\nTip\n\n\n\nRemember that you can use Figure 12.1 to select a statistical test that is appropriate for the level of measurement of the variables.\n\n\n\nImplement the appropriate statistical test to determine whether there is a significant linear relationship between how many times people left their home and the total number of contacts they had with other people.\n\nState your hypothesis.\nSelect and conduct a statistical test to address your hypothesis.\nReport the test statistic and p-value.\nDoes the statistical test support or refute your hypothesis? If there is a significant relationship, describe it. Does this finding make sense? Why or why not?\n\nIs there a difference in whether the majority of respondents in Asia compared to those in Europe said their lives were impacted by COVID?\n\nState your hypothesis.\nSelect and conduct a statistical test to address your hypothesis.\nReport the test statistic and p-value.\nDoes the statistical test support or refute your hypothesis? If there is a significant difference, describe it (e.g., which region, Asia or Europe, had more respondents who said their lives were impacted by COVID). You can use the filter() and freq() functions to help you describe the differences.\n\nBONUS: Use the data and a statistical test to determine whether there is a relationship between the number of days since the COVID outbreak began and how often respondents wore masks outside. Conduct the statistical test, report the results of the test (i.e., test statistic and p-value) and explain your conclusion.\nBONUS: Create a figure showing the number of times people living in Asia and Europe washed their hands. Remove the x-axis label so that only the tick marks are labeled (i.e., with “Asia” and “Europe”) and rename the y-axis label to “Average number of times people washed their hands on the previous day.”",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>LA-8: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-8-textbook.html#submission",
+    "href": "LA-8-textbook.html#submission",
+    "title": "13  LA-8: Practice Data Analysis",
+    "section": "13.3 Submission",
+    "text": "13.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>LA-8: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html",
+    "href": "LA-9-textbook.html",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "",
+    "text": "14.1 Learning Outcomes\nIn this assignment, you will practice the data analysis skills that you have learned this semester.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html#learning-outcomes",
+    "href": "LA-9-textbook.html#learning-outcomes",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "",
+    "text": "Tip\n\n\n\nRead all the instructions carefully before starting the assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html#instructions",
+    "href": "LA-9-textbook.html#instructions",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "14.2 Instructions",
+    "text": "14.2 Instructions\n\nDownload the CPS dataset (CPS.csv) and codebook (CPS-codebook.csv). Use the codebook to familiarize yourself with the variables in the data and read the data into R. Install the packages that we have been using this semester.\n\nData for this assignment comes from the 1985 Current Population Survey (CPS). The CPS is used to supplement census information between census years. These data consist of a random sample of persons from the survey, with information on wages and other characteristics of the workers, including sex, number of years of education, years of work experience, occupational status, region of residence and union membership. This data frame has 534 observations.\n\nFind the mean wage earned per hour for males and females.\n\nWhat is the mean wage earned per hour for females?\nWhat is the mean wage earned per hour for males?\n\nImplement the appropriate statistical test to determine whether males have significantly higher wages earned per hour than females.\n\nState your hypothesis about whether males earn higher wages per hour than females.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? Do males or females earn higher wages on average?\n\nImplement the appropriate statistical test to determine whether there is a significant linear relationship between wages earned per hour and number of years of work experience.\n\nState your hypothesis about the relationship between wages earned per hour and number of years of experience.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? What is the relationship, if any, between wages earned per hour and number of years of experience?\n\nImplement the appropriate statistical test to determine whether job satisfaction varies significantly among the different job sectors.\n\nState your hypothesis about whether job satisfaction varies significantly among job sectors.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? Does job satisfaction vary among different job sectors?\n\nImplement the appropriate statistical test to determine whether wages vary by job sector.\n\nState your hypothesis about whether wages and job sector are related.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? Do wages vary among different job sectors?",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html#submission",
+    "href": "LA-9-textbook.html#submission",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "14.3 Submission",
+    "text": "14.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
   }
 ]
