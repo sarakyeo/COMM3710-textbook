@@ -11,7 +11,10 @@ book:
     - 02_setup.qmd
     - 03_tips.qmd
     - 04_ggplot2.qmd
-    - LA-1.qmd
+    - LA-1-textbook.qmd
+    - LA-2-textbook.qmd
+    - LA-3-textbook.qmd
+    - LA-4-textbook.qmd
 
 bibliography: [book.bib, packages.bib]
 
