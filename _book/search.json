@@ -698,5 +698,45 @@
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>LA-8: Practice Data Analysis</span>"
     ]
+  },
+  {
+    "objectID": "LA-9-textbook.html",
+    "href": "LA-9-textbook.html",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "",
+    "text": "14.1 Learning Outcomes\nIn this assignment, you will practice the data analysis skills that you have learned this semester.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html#learning-outcomes",
+    "href": "LA-9-textbook.html#learning-outcomes",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "",
+    "text": "Tip\n\n\n\nRead all the instructions carefully before starting the assignment.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html#instructions",
+    "href": "LA-9-textbook.html#instructions",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "14.2 Instructions",
+    "text": "14.2 Instructions\n\nDownload the CPS dataset (CPS.csv) and codebook (CPS-codebook.csv). Use the codebook to familiarize yourself with the variables in the data and read the data into R. Install the packages that we have been using this semester.\n\nData for this assignment comes from the 1985 Current Population Survey (CPS). The CPS is used to supplement census information between census years. These data consist of a random sample of persons from the survey, with information on wages and other characteristics of the workers, including sex, number of years of education, years of work experience, occupational status, region of residence and union membership. This data frame has 534 observations.\n\nFind the mean wage earned per hour for males and females.\n\nWhat is the mean wage earned per hour for females?\nWhat is the mean wage earned per hour for males?\n\nImplement the appropriate statistical test to determine whether males have significantly higher wages earned per hour than females.\n\nState your hypothesis about whether males earn higher wages per hour than females.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? Do males or females earn higher wages on average?\n\nImplement the appropriate statistical test to determine whether there is a significant linear relationship between wages earned per hour and number of years of work experience.\n\nState your hypothesis about the relationship between wages earned per hour and number of years of experience.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? What is the relationship, if any, between wages earned per hour and number of years of experience?\n\nImplement the appropriate statistical test to determine whether job satisfaction varies significantly among the different job sectors.\n\nState your hypothesis about whether job satisfaction varies significantly among job sectors.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? Does job satisfaction vary among different job sectors?\n\nImplement the appropriate statistical test to determine whether wages vary by job sector.\n\nState your hypothesis about whether wages and job sector are related.\nWhich statistical test will you use to address your hypothesis? Conduct the statistical test you have chosen.\nWhat is the test statistic and associated p-value?\nDoes the test support or refute your hypothesis? Do wages vary among different job sectors?",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "LA-9-textbook.html#submission",
+    "href": "LA-9-textbook.html#submission",
+    "title": "14  LA-9: Practice Data Analysis",
+    "section": "14.3 Submission",
+    "text": "14.3 Submission\nSubmit your R script (named LA-#_FirstName-LastName.R) to Canvas.\nYour R script should:\n\nInclude commands and functions that are necessary to address all the questions in the assignment.\nContain comments that answer the questions in the assignment.\nRun in its entirety without errors.\n\nTo ensure that your R script runs without errors, you should:\n\nSave your script.\nNavigate back to Your Workspace on Posit Cloud.\nReopen your project.\nRun the entire script line-by-line without editing it to ensure there are no errors.\n\n\n\n\n\n\n\nImportant\n\n\n\nThese standards apply to all submissions in this course that require R scripts. You should follow these instructions for preparation, naming, and saving of your R script for all of your individual lab assignments.",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>LA-9: Practice Data Analysis</span>"
+    ]
   }
 ]
